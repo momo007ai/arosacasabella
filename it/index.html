@@ -52,6 +52,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 
 <!-- Performance / Core Web Vitals: Hero-Bild bevorzugt laden (besserer LCP) -->
 <link rel="preload" as="image" href="/images/08.jpg" fetchpriority="high">
@@ -242,6 +243,12 @@
   .hero-press{display:inline-flex;align-items:center;gap:8px;margin:0 auto 22px;padding:8px 18px;border:1px solid rgba(243,236,225,.35);border-radius:30px;background:rgba(35,30,24,.25);backdrop-filter:blur(4px);font-size:.76rem;letter-spacing:.07em;color:var(--cream);transition:all .25s}
   .hero-press:hover{border-color:var(--wood-light);color:#fff}
   .hero-press .star{color:var(--wood-light)}
+  /* Karte */
+  #arosaMap{height:clamp(320px,45vw,460px);border-radius:6px;border:1px solid var(--line);overflow:hidden;z-index:0;background:var(--bg-soft)}
+  .leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--panel)!important;color:var(--cream)!important}
+  .leaflet-popup-content-wrapper{border:1px solid var(--line)}
+  .leaflet-container{font-family:'Inter',sans-serif}
+  .leaflet-bar a{background:var(--panel)!important;color:var(--cream)!important;border-color:var(--line)!important}
   /* Geschwungener, edler Titel */
   .brand,.hero h1{font-family:'Great Vibes','Cormorant Garamond',cursive;letter-spacing:0;font-weight:400}
   .brand{font-size:1.95rem}
@@ -460,6 +467,17 @@
   </div>
 </section>
 
+<!-- KARTE -->
+<section id="karte" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow" data-de="Lage auf der Karte" data-en="On the map" data-fr="Sur la carte" data-it="Sulla mappa">Sulla mappa</div>
+      <h2 data-de="So zentral liegt die Casa Bella" data-en="See how central Casa Bella is" data-fr="L'emplacement central de la Casa Bella" data-it="La posizione centrale della Casa Bella">La posizione centrale della Casa Bella</h2>
+    </div>
+    <div class="reveal"><div id="arosaMap"></div></div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section class="amen-sec" id="faq">
   <div class="wrap">
@@ -566,6 +584,7 @@
   <button class="lb-nav next" id="lbNext">›</button>
 </div>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJ9sFsDjeM/Tm4MfTtw0/+ehTZ7uM=" crossorigin=""></script>
 <script>
   // ===== Buchungslink (offizielles Arosa-Lenzerheide-Buchungssystem) =====
   const BOOK_URL = "https://bergluft-arosa.ch/ferienwohnung/casa-bella/#buchen";
@@ -613,6 +632,28 @@
   addEventListener('scroll',moveSkier,{passive:true});
   addEventListener('resize',moveSkier);
   moveSkier();
+
+  // Zahlen hochzählen beim Scrollen
+  const statObs=new IntersectionObserver((es)=>{es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;const m=el.textContent.match(/^\s*([\d.]+)(.*)$/);if(m){const target=parseFloat(m[1]);const suf=m[2];let t0=null;const dur=1100;const step=(ts)=>{if(!t0)t0=ts;const p=Math.min(1,(ts-t0)/dur);el.textContent=Math.round(target*p)+suf;if(p<1)requestAnimationFrame(step);};requestAnimationFrame(step);}statObs.unobserve(el);});},{threshold:.6});
+  document.querySelectorAll('.stat .n').forEach(el=>statObs.observe(el));
+
+  // Interaktive Arosa-Karte (lazy beim Scrollen)
+  const mapEl=document.getElementById('arosaMap');
+  if(mapEl && window.L){
+    let done=false;
+    const mo=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting && !done){done=true;
+      const map=L.map('arosaMap',{scrollWheelZoom:false}).setView([46.7818,9.6788],15);
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:'© OpenStreetMap, © CARTO'}).addTo(map);
+      const pin=(lat,lng,t,main)=>L.circleMarker([lat,lng],{radius:main?10:7,color:'#231e18',weight:2,fillColor:'#d3a572',fillOpacity:1}).addTo(map).bindPopup('<b>'+t+'</b>');
+      pin(46.7818,9.6788,'Casa Bella',true).openPopup();
+      pin(46.7818,9.6805,'Aroser Bergkirche');
+      pin(46.7806,9.6788,'Bahnhof Arosa (RhB)');
+      pin(46.7795,9.6760,'Obersee');
+      pin(46.7790,9.6735,'Bergbahn · Skigebiet');
+      mo.disconnect();
+    }});},{threshold:.15});
+    mo.observe(mapEl);
+  }
 
   // lightbox
   const items = [...document.querySelectorAll('.gitem')];

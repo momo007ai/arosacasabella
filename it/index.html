@@ -2,6 +2,15 @@
 <html lang="it"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Analytics 4 (gtag.js) mit Consent Mode -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1L93ZN9SJK"></script>
+<script>
+  window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());
+  gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
+  gtag('config','G-1L93ZN9SJK',{anonymize_ip:true});
+  try{if(localStorage.getItem('cc-consent')==='granted')gtag('consent','update',{analytics_storage:'granted'});}catch(e){}
+</script>
 <title>Casa Bella Arosa · Appartamento di vacanza di lusso in affitto | 142 m², 8 persone, terrazza</title>
 <meta name="description" content="Casa Bella – esclusivo appartamento di vacanza chic alpino ad Arosa. 142 m², terrazza soleggiata di 73 m² con vista sulle montagne, 3 camere per 8 persone, 2 posti garage, centrale e tranquillo. Vacanze nel comprensorio sciistico di Arosa Lenzerheide – estate e inverno.">
 <meta name="keywords" content="Ferienwohnung Arosa, Ferienwohnung Arosa mieten, Ferienwohnung Arosa buchen, Ferienwohnung mieten Arosa, Casa Bella Arosa, Casa Bella Ferienwohnung, Arosa Ferienwohnung, Arosa exklusiv, exklusive Ferienwohnung Arosa, Luxus Ferienwohnung Arosa, Luxuswohnung Arosa, Luxus Ferienwohnung Graubünden, Premium Ferienwohnung Arosa, Arosa Wohnung, Wohnung mieten Arosa, Wohnung Arosa, Ferienapartment Arosa, Apartment Arosa, Ferienunterkunft Arosa, Unterkunft Arosa, Arosa Unterkunft, Arosa Tourismus, Ferien Arosa, Urlaub Arosa, Ferien in Arosa, Bergferien Arosa, Winterferien Arosa, Sommerferien Arosa, Skiurlaub Arosa, Skiferien Arosa, Skifahren Arosa, Wandern Arosa, Familienferienwohnung Arosa, Ferienwohnung für Familien Arosa, Gruppenunterkunft Arosa, Ferienwohnung 8 Personen Arosa, grosse Ferienwohnung Arosa, Ferienwohnung 8 Personen, Chalet Arosa, Chaletwohnung Arosa, Alpenchic Wohnung Arosa, Ferienwohnung mit Terrasse Arosa, Ferienwohnung Bergblick Arosa, Ferienwohnung Sonnenterrasse Arosa, Ferienwohnung mit Garage Arosa, Ferienwohnung Zentrum Arosa, zentrale Ferienwohnung Arosa, Ferienwohnung nahe Skigebiet Arosa, Ferienwohnung Arosa Lenzerheide, Arosa Lenzerheide Unterkunft, Arosa Lenzerheide Ferienwohnung, Ferienwohnung Graubünden, Ferienwohnung Schweiz, Ferienwohnung Schweizer Alpen, Ferienwohnung Schanfigg, Ferienwohnung 7050 Arosa, Casa Valbella Arosa, Bergluft Arosa, Ferienwohnung Bergluft Arosa, Skiwohnung Arosa, Wellness Ferienwohnung Arosa, romantische Ferienwohnung Arosa, Ferienwohnung mit Bergpanorama Arosa, Bergwohnung Arosa, Ferienhaus Arosa, Ferienwohnung Berge Schweiz, Ferienwohnung Winterurlaub Arosa, Ferienwohnung Sommerurlaub Arosa, holiday apartment Arosa, luxury holiday apartment Arosa, apartment Arosa Switzerland, holiday apartment Arosa Switzerland, luxury apartment Arosa, vacation rental Arosa, holiday rental Arosa, self catering Arosa, ski apartment Arosa, ski holiday Arosa, apartment to rent Arosa, holiday flat Arosa, Arosa accommodation, Arosa apartment rental, luxury chalet apartment Arosa, apartment with mountain view Arosa, apartment Arosa Lenzerheide, holiday apartment Graubünden, vacation apartment Swiss Alps, family apartment Arosa, apartment for 8 guests Arosa, appartement de vacances Arosa, appartement Arosa, location vacances Arosa, location appartement Arosa, appartement de luxe Arosa, appartement vacances ski Arosa, chalet appartement Arosa, hébergement Arosa, vacances Arosa, appartement montagne Arosa, appartamento vacanze Arosa, appartamento Arosa, affitto appartamento Arosa, casa vacanze Arosa, appartamento di lusso Arosa, vacanze Arosa, alloggio Arosa, appartamento montagna Arosa, settimana bianca Arosa, appartamento sci Arosa">
@@ -225,6 +234,15 @@
   /* Wetter-Widget */
   .weather{display:none;align-items:center;gap:9px;margin:0 auto 28px;padding:9px 18px;border:1px solid var(--line);border-radius:30px;background:var(--bg-soft);font-size:.85rem;color:var(--cream)}
   .weather b{color:var(--wood-light);font-weight:600}
+  /* Cookie-Banner */
+  .cookie-banner{position:fixed;left:50%;bottom:18px;transform:translate(-50%,180%);z-index:200;max-width:660px;width:calc(100% - 30px);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px 20px;box-shadow:0 18px 50px rgba(0,0,0,.5);transition:transform .5s var(--ease,cubic-bezier(.22,.61,.36,1))}
+  .cookie-banner.show{transform:translate(-50%,0)}
+  .cookie-banner p{margin:0 0 12px;font-size:.86rem;color:var(--text);line-height:1.55}
+  .cc-btns{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .cc-accept,.cc-decline{font-family:inherit;font-size:.76rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:9px 18px;border-radius:3px;cursor:pointer;border:1px solid transparent}
+  .cc-accept{background:var(--wood);color:#fff}.cc-accept:hover{background:var(--wood-light)}
+  .cc-decline{background:transparent;color:var(--muted);border-color:var(--line)}.cc-decline:hover{color:var(--cream)}
+  .cc-link{font-size:.78rem;color:var(--wood-light);margin-left:auto;text-decoration:underline}
 
   /* A11Y / SEO */
   .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
@@ -625,6 +643,16 @@
   </div>
 </footer>
 
+<!-- COOKIE-BANNER -->
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie-Hinweis">
+  <p data-de="Wir nutzen Google Analytics, um die Nutzung der Seite anonym zu verstehen. Erlaubst du Statistik-Cookies?" data-en="We use Google Analytics to understand site usage anonymously. Do you allow statistics cookies?" data-fr="Nous utilisons Google Analytics pour comprendre l'usage du site de manière anonyme. Autorisez-vous les cookies statistiques ?" data-it="Utilizziamo Google Analytics per capire l'uso del sito in modo anonimo. Consenti i cookie statistici?">Utilizziamo Google Analytics per capire l'uso del sito in modo anonimo. Consenti i cookie statistici?</p>
+  <div class="cc-btns">
+    <button id="cc-accept" class="cc-accept" data-de="Akzeptieren" data-en="Accept" data-fr="Accepter" data-it="Accetta">Accetta</button>
+    <button id="cc-decline" class="cc-decline" data-de="Ablehnen" data-en="Decline" data-fr="Refuser" data-it="Rifiuta">Rifiuta</button>
+    <a href="/datenschutz.html" class="cc-link" data-de="Datenschutz" data-en="Privacy" data-fr="Confidentialité" data-it="Privacy">Privacy</a>
+  </div>
+</div>
+
 <!-- LIGHTBOX -->
 <div class="lb" id="lb">
   <button class="lb-close" id="lbClose" aria-label="Schliessen">×</button>
@@ -642,6 +670,10 @@
   // ===== Buchungslink (offizielles Arosa-Lenzerheide-Buchungssystem) =====
   const BOOK_URL = "https://bergluft-arosa.ch/ferienwohnung/casa-bella/#buchen";
   document.getElementById('book-link').href = BOOK_URL;
+  // Buchen-Button Klick-Event (GA4)
+  (function(){var bl=document.getElementById('book-link');if(bl)bl.addEventListener('click',function(){if(window.gtag)gtag('event','verfuegbarkeit_klick',{event_category:'engagement',event_label:'Bergluft Buchung'});});})();
+  // Cookie-Banner / Einwilligung
+  (function(){var b=document.getElementById('cookie-banner');if(!b)return;var c;try{c=localStorage.getItem('cc-consent');}catch(e){}if(!c)b.classList.add('show');function set(v){try{localStorage.setItem('cc-consent',v);}catch(e){}b.classList.remove('show');if(v==='granted'&&window.gtag)gtag('consent','update',{analytics_storage:'granted'});}var a=document.getElementById('cc-accept'),d=document.getElementById('cc-decline');if(a)a.onclick=function(){set('granted');};if(d)d.onclick=function(){set('denied');};})();
 
   document.getElementById('year').textContent = new Date().getFullYear();
 

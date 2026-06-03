@@ -260,6 +260,10 @@
   .leaflet-popup-content-wrapper{border:1px solid var(--line)}
   .leaflet-container{font-family:'Inter',sans-serif}
   .leaflet-bar a{background:var(--panel)!important;color:var(--cream)!important;border-color:var(--line)!important}
+  .leaflet-control-layers{background:var(--panel)!important;color:var(--cream)!important;border:1px solid var(--line)!important}
+  .leaflet-control-layers-toggle{filter:invert(.85)}
+  .casa-label{background:var(--wood)!important;color:#fff!important;border:none!important;border-radius:5px;font-weight:600;font-size:.8rem;letter-spacing:.02em;padding:4px 10px;box-shadow:0 4px 14px rgba(0,0,0,.45)}
+  .casa-label.leaflet-tooltip-top::before{border-top-color:var(--wood)!important}
   /* Geschwungener, edler Titel */
   .brand,.hero h1{font-family:'Great Vibes','Cormorant Garamond',cursive;letter-spacing:0;font-weight:400}
   .brand{font-size:1.95rem}
@@ -696,19 +700,17 @@
     let done=false;
     const mo=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting && !done){done=true;
       const map=L.map('arosaMap',{scrollWheelZoom:false});
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'}).addTo(map);
+      const sat=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Tiles © Esri, Maxar, Earthstar Geographics'}).addTo(map);
+      const street=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'});
+      L.control.layers({'Satellit':sat,'Karte':street},null,{position:'topright'}).addTo(map);
       const pts=[];
-      const pin=(lat,lng,t,main)=>{pts.push([lat,lng]);return L.circleMarker([lat,lng],{radius:main?10:7,color:'#231e18',weight:2,fillColor:main?'#d3a572':'#c08a4e',fillOpacity:1}).addTo(map).bindPopup('<b>'+t+'</b>');};
-      const lift=(lat,lng,t)=>{pts.push([lat,lng]);return L.circleMarker([lat,lng],{radius:7,color:'#fff',weight:2,fillColor:'#9a6b3f',fillOpacity:1}).addTo(map).bindPopup('🚠 <b>'+t+'</b>');};
-      pin(46.7818,9.6788,'Casa Bella',true).openPopup();
-      pin(46.7818,9.6805,'Aroser Bergkirche');
-      pin(46.7806,9.6788,'Bahnhof Arosa (RhB)');
-      pin(46.7795,9.6760,'Obersee');
-      lift(46.7796,9.6730,'Weisshornbahn · Talstation');
-      lift(46.7702,9.6612,'Hörnli-Express · Innerarosa');
-      lift(46.7815,9.6665,'Carmenna-Sesselbahn');
-      lift(46.7865,9.6805,'Tschuggen-Express');
-      map.fitBounds(pts,{padding:[40,40],maxZoom:15});
+      const pin=(lat,lng,t,main)=>{pts.push([lat,lng]);return L.circleMarker([lat,lng],{radius:main?10:7,color:'#fff',weight:2,fillColor:main?'#d3a572':'#c08a4e',fillOpacity:1}).addTo(map).bindPopup('<b>'+t+'</b>');};
+      pin(46.77745,9.67436,'Casa Bella',true).bindTooltip('★ Casa Bella',{permanent:true,direction:'top',offset:[0,-9],className:'casa-label'}).openTooltip();
+      pin(46.78343,9.67879,'🚠 Weisshornbahn');
+      pin(46.78388,9.67944,'Bahnhof Arosa (RhB)');
+      pin(46.78466,9.68154,'Obersee');
+      pin(46.77914,9.68178,'Untersee');
+      map.fitBounds(pts,{padding:[55,55],maxZoom:16});
       setTimeout(()=>map.invalidateSize(),250);
       mo.disconnect();
     }});},{threshold:.15});

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://momo007ai.github.io/arosacasabella/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://momo007ai.github.io/arosacasabella/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://momo007ai.github.io/arosacasabella/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://momo007ai.github.io/arosacasabella/"/>
+    <image:image xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+      <image:loc>https://momo007ai.github.io/arosacasabella/images/01.jpg</image:loc>
+      <image:caption>Sonnenterrasse der Casa Bella mit Blick auf die Aroser Bergkirche</image:caption>
+    </image:image>
+  </url>
+</urlset>

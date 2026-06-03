@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://casabellaarosa.ch/sitemap.xml
+Sitemap: https://www.casabellaarosa.ch/sitemap.xml

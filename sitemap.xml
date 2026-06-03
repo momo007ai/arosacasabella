@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.casabellaarosa.ch/</loc>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.casabellaarosa.ch/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.casabellaarosa.ch/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.casabellaarosa.ch/"/>
-    <image:image xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-      <image:loc>https://www.casabellaarosa.ch/images/01.jpg</image:loc>
-      <image:caption>Sonnenterrasse der Casa Bella mit Blick auf die Aroser Bergkirche</image:caption>
-    </image:image>
+    <image:image><image:loc>https://www.casabellaarosa.ch/images/01.jpg</image:loc><image:caption>Sonnenterrasse der Casa Bella mit Blick auf die Aroser Bergkirche</image:caption></image:image>
+    <image:image><image:loc>https://www.casabellaarosa.ch/images/08.jpg</image:loc><image:caption>Heller Wohn- und Essbereich im Alpenchic-Stil</image:caption></image:image>
+    <image:image><image:loc>https://www.casabellaarosa.ch/images/04.jpg</image:loc><image:caption>Designerküche mit Terrassenzugang und Bergblick</image:caption></image:image>
+    <image:image><image:loc>https://www.casabellaarosa.ch/images/07.jpg</image:loc><image:caption>Wohnzimmer mit Natursteinwand und Geweihleuchter</image:caption></image:image>
+    <image:image><image:loc>https://www.casabellaarosa.ch/images/03.jpg</image:loc><image:caption>Schlafzimmer im Alpenchic-Stil</image:caption></image:image>
+  </url>
+  <url>
+    <loc>https://www.casabellaarosa.ch/impressum.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.casabellaarosa.ch/datenschutz.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

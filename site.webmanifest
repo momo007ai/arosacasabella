@@ -1,0 +1,19 @@
+{
+  "name": "Casa Bella Arosa – Luxus-Ferienwohnung",
+  "short_name": "Casa Bella",
+  "description": "Exklusive Alpenchic-Ferienwohnung in Arosa: 142 m², 73 m² Sonnenterrasse, bis 8 Gäste.",
+  "lang": "de",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#11100e",
+  "theme_color": "#11100e",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2311100e'/%3E%3Cpath d='M12 46l12-22 8 14 5-8 15 16z' fill='%23c89b6b'/%3E%3Ccircle cx='46' cy='18' r='5' fill='%23f3ece1'/%3E%3C/svg%3E",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

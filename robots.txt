@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://momo007ai.github.io/arosacasabella/sitemap.xml
+Sitemap: https://casabellaarosa.ch/sitemap.xml

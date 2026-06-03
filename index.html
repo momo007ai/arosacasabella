@@ -71,14 +71,14 @@
 
 <style>
   :root{
-    --bg:#11100e; --bg-soft:#1a1815; --panel:#201d19;
-    --wood:#9a6b3f; --wood-light:#c89b6b; --cream:#f3ece1;
-    --text:#e8e0d4; --muted:#a89f90; --line:rgba(200,155,107,.22);
+    --bg:#231e18; --bg-soft:#2c261e; --panel:#352d24;
+    --wood:#a9743f; --wood-light:#d3a572; --cream:#f5efe4;
+    --text:#ece4d7; --muted:#b3a692; --line:rgba(211,165,114,.26);
     --maxw:1180px; --ease:cubic-bezier(.22,.61,.36,1);
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body{background:radial-gradient(125% 85% at 50% 0%,#352d24 0%,var(--bg) 52%) no-repeat var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.1;letter-spacing:.5px}
   a{color:inherit;text-decoration:none}
   img{display:block;max-width:100%}
@@ -87,7 +87,7 @@
 
   /* NAV */
   nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:22px clamp(20px,4vw,52px);transition:background .4s var(--ease),padding .4s var(--ease),box-shadow .4s var(--ease)}
-  nav.scrolled{background:rgba(17,16,14,.88);backdrop-filter:blur(14px);padding:14px clamp(20px,4vw,52px);box-shadow:0 1px 0 var(--line)}
+  nav.scrolled{background:rgba(35,30,24,.88);backdrop-filter:blur(14px);padding:14px clamp(20px,4vw,52px);box-shadow:0 1px 0 var(--line)}
   .brand{font-family:'Cormorant Garamond',serif;font-size:1.5rem;letter-spacing:1px;color:var(--cream)}
   .brand span{color:var(--wood-light)}
   .nav-links{display:flex;align-items:center;gap:30px}
@@ -102,7 +102,7 @@
   .hero{position:relative;height:100vh;min-height:620px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
   .hero-img{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.08);animation:slowzoom 20s var(--ease) forwards}
   @keyframes slowzoom{to{transform:scale(1)}}
-  .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 38%,rgba(17,16,14,.28) 0%,rgba(17,16,14,.55) 70%,rgba(17,16,14,.8) 100%),linear-gradient(180deg,rgba(17,16,14,.45) 0%,rgba(17,16,14,.25) 40%,rgba(17,16,14,.85) 100%)}
+  .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 38%,rgba(35,30,24,.28) 0%,rgba(35,30,24,.55) 70%,rgba(35,30,24,.8) 100%),linear-gradient(180deg,rgba(35,30,24,.45) 0%,rgba(35,30,24,.25) 40%,rgba(35,30,24,.85) 100%)}
   .hero-inner{position:relative;z-index:2;max-width:860px;padding:0 24px;opacity:0;transform:translateY(24px);animation:rise 1.1s var(--ease) .25s forwards}
   @keyframes rise{to{opacity:1;transform:translateY(0)}}
   .hero h1{font-size:clamp(2.8rem,7vw,5.6rem);color:#fff;margin:18px 0 14px;text-shadow:0 2px 30px rgba(0,0,0,.4)}
@@ -146,8 +146,8 @@
   /* AMENITIES */
   .amen-sec{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .amen-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
-  .amen{background:var(--bg-soft);padding:34px 30px;transition:background .4s}
-  .amen:hover{background:var(--panel)}
+  .amen{background:var(--bg-soft);padding:34px 30px;transition:background .4s,transform .4s var(--ease)}
+  .amen:hover{background:var(--panel);transform:translateY(-5px)}
   .amen svg{width:30px;height:30px;stroke:var(--wood-light);stroke-width:1.4;fill:none;margin-bottom:16px}
   .amen h3{font-size:1.32rem;color:var(--cream);margin-bottom:6px}
   .amen p{font-size:.9rem;color:var(--muted)}
@@ -156,7 +156,7 @@
   .gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:14px}
   .gitem{position:relative;overflow:hidden;border-radius:3px;cursor:pointer;background:var(--panel)}
   .gitem .ph{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 1s var(--ease)}
-  .gitem::after{content:"";position:absolute;inset:0;background:rgba(17,16,14,.12);opacity:0;transition:opacity .4s}
+  .gitem::after{content:"";position:absolute;inset:0;background:rgba(35,30,24,.12);opacity:0;transition:opacity .4s}
   .gitem:hover .ph{transform:scale(1.08)}
   .gitem:hover::after{opacity:1}
   .gitem.big{grid-column:span 2;grid-row:span 2}
@@ -170,10 +170,11 @@
   .season-tabs button{background:none;border:1px solid var(--line);color:var(--muted);cursor:pointer;font-family:inherit;font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:11px 26px;border-radius:30px;transition:all .3s}
   .season-tabs button.active{background:var(--wood);border-color:var(--wood);color:#fff}
   .act-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
-  .act{position:relative;height:320px;border-radius:4px;overflow:hidden}
+  .act{position:relative;height:320px;border-radius:4px;overflow:hidden;transition:transform .45s var(--ease),box-shadow .45s var(--ease)}
+  .act:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(0,0,0,.4)}
   .act .ph{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 1.1s var(--ease)}
   .act:hover .ph{transform:scale(1.07)}
-  .act::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(17,16,14,.9))}
+  .act::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(35,30,24,.9))}
   .act-cap{position:absolute;bottom:0;left:0;right:0;padding:26px;z-index:2}
   .act-cap h3{font-size:1.6rem;color:#fff;margin-bottom:4px}
   .act-cap p{font-size:.85rem;color:var(--cream);opacity:.85}
@@ -182,7 +183,8 @@
 
   /* GOOD TO KNOW */
   .gtk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px}
-  .gtk{border-left:2px solid var(--line);padding:4px 0 4px 22px}
+  .gtk{border-left:2px solid var(--line);padding:4px 0 4px 22px;transition:transform .35s var(--ease),border-color .35s}
+  .gtk:hover{transform:translateX(5px);border-color:var(--wood-light)}
   .gtk h4{font-family:'Inter',sans-serif;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--wood-light);margin-bottom:10px;font-weight:600}
   .gtk p{color:var(--text);font-size:.96rem;margin-bottom:4px}
   .gtk small{color:var(--muted);font-size:.82rem}
@@ -190,14 +192,14 @@
   /* CTA */
   .cta{position:relative;text-align:center;overflow:hidden}
   .cta-bg{position:absolute;inset:0;background-size:cover;background-position:center}
-  .cta::after{content:"";position:absolute;inset:0;background:rgba(17,16,14,.78)}
+  .cta::after{content:"";position:absolute;inset:0;background:rgba(35,30,24,.78)}
   .cta .wrap{position:relative;z-index:2}
   .cta h2{font-size:clamp(2.3rem,5vw,3.8rem);color:#fff;margin:16px 0 18px}
   .cta p{color:var(--cream);max-width:560px;margin:0 auto 36px;font-size:1.05rem}
   .platform-note{margin-top:22px;font-size:.8rem;color:var(--muted);letter-spacing:.04em}
 
   /* FOOTER */
-  footer{background:#0c0b0a;border-top:1px solid var(--line);padding:60px 0 34px}
+  footer{background:#1b1712;border-top:1px solid var(--line);padding:60px 0 34px}
   .foot-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:40px}
   .foot-col h4{font-family:'Inter',sans-serif;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--wood-light);margin-bottom:16px;font-weight:600}
   .foot-col p,.foot-col a{display:block;color:var(--muted);font-size:.92rem;margin-bottom:8px;transition:color .25s}
@@ -217,6 +219,10 @@
   /* A11Y / SEO */
   .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
+  /* Dekorativer Skifahrer */
+  #skier{position:fixed;top:0;left:3%;z-index:-1;width:clamp(38px,4.5vw,66px);color:var(--wood-light);opacity:0;transform:rotate(10deg);pointer-events:none;transition:opacity .5s;will-change:top,left}
+  @media(max-width:560px){#skier{width:34px}}
+
   /* FAQ */
   .faq-list{max-width:840px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
   .faq-list details{background:var(--panel);border:1px solid var(--line);border-radius:4px;overflow:hidden}
@@ -234,7 +240,7 @@
   .press-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.5vw,2.3rem);color:var(--cream);transition:color .25s}
   .press-title:hover{color:var(--wood-light)}
   .press-sub{font-size:.85rem;color:var(--muted)}
-  .hero-press{display:inline-flex;align-items:center;gap:8px;margin:0 auto 22px;padding:8px 18px;border:1px solid rgba(243,236,225,.35);border-radius:30px;background:rgba(17,16,14,.25);backdrop-filter:blur(4px);font-size:.76rem;letter-spacing:.07em;color:var(--cream);transition:all .25s}
+  .hero-press{display:inline-flex;align-items:center;gap:8px;margin:0 auto 22px;padding:8px 18px;border:1px solid rgba(243,236,225,.35);border-radius:30px;background:rgba(35,30,24,.25);backdrop-filter:blur(4px);font-size:.76rem;letter-spacing:.07em;color:var(--cream);transition:all .25s}
   .hero-press:hover{border-color:var(--wood-light);color:#fff}
   .hero-press .star{color:var(--wood-light)}
   /* Geschwungener, edler Titel */
@@ -247,6 +253,9 @@
 </style>
 </head>
 <body>
+
+<!-- Skifahrer (dekorativ, fährt beim Scrollen diagonal hinter dem Inhalt herunter) -->
+<div id="skier" aria-hidden="true"><svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 62 L60 72"/><path d="M12 67 L58 77"/><path d="M40 42 L36 60"/><path d="M40 42 L47 58"/><path d="M40 42 L50 30"/><circle cx="54" cy="25" r="4.5"/><path d="M50 30 L60 36 L57 52"/><path d="M50 30 L42 34 L40 50"/></svg></div>
 
 <!-- NAV -->
 <nav id="nav">
@@ -268,7 +277,7 @@
 
 <!-- HERO -->
 <header class="hero" id="top">
-  <div class="hero-img" style="background-image:url('images/08.jpg')"></div>
+  <div class="hero-img" style="background-image:url('images/08.jpg');background-image:image-set(url('images/08.webp') type('image/webp'), url('images/08.jpg') type('image/jpeg'))"></div>
   <div class="hero-inner">
     <div class="eyebrow" data-de="Alpenchic-Ferienwohnung · 7050 Arosa" data-en="Alpine-Chic Holiday Apartment · 7050 Arosa" data-fr="Appartement de vacances chic alpin · 7050 Arosa" data-it="Appartamento di vacanza chic alpino · 7050 Arosa">Alpenchic-Ferienwohnung · 7050 Arosa</div>
     <h1 data-de="Casa Bella<span class='visually-hidden'> – Luxus-Ferienwohnung in Arosa mieten</span>" data-en="Casa Bella<span class='visually-hidden'> – luxury holiday apartment for rent in Arosa</span>" data-fr="Casa Bella<span class='visually-hidden'> – appartement de vacances de luxe à louer à Arosa</span>" data-it="Casa Bella<span class='visually-hidden'> – appartamento di vacanza di lusso in affitto ad Arosa</span>">Casa Bella<span class="visually-hidden"> – Luxus-Ferienwohnung in Arosa mieten</span></h1>
@@ -311,7 +320,7 @@
       </div>
     </div>
     <div class="split-img">
-      <div class="ph" style="background-image:url('images/06.jpg')"></div>
+      <div class="ph" style="background-image:url('images/06.jpg');background-image:image-set(url('images/06.webp') type('image/webp'), url('images/06.jpg') type('image/jpeg'))"></div>
     </div>
   </div>
 </section>
@@ -344,7 +353,7 @@
       <p data-de="Zwei grosszügige Sofas, ein massiver Altholztisch und der unverwechselbare Geweihleuchter laden zum Verweilen ein. Die Natursteinwand und das warme Holz schaffen eine Atmosphäre, in der man nach einem Tag im Schnee einfach abschalten kann." data-en="Two generous sofas, a solid reclaimed-wood table and the unmistakable antler chandelier invite you to linger. The natural-stone wall and warm wood create an atmosphere where you can simply unwind after a day in the snow." data-fr="Deux canapés généreux, une table massive en vieux bois et l'inimitable lustre en bois de cerf invitent à s'attarder. Le mur en pierre naturelle et le bois chaleureux créent une atmosphère où l'on peut tout simplement se détendre après une journée dans la neige." data-it="Due ampi divani, un massiccio tavolo in legno antico e l'inconfondibile lampadario in corna di cervo invitano a indugiare. La parete in pietra naturale e il legno caldo creano un'atmosfera in cui rilassarsi semplicemente dopo una giornata sulla neve.">Zwei grosszügige Sofas, ein massiver Altholztisch und der unverwechselbare Geweihleuchter laden zum Verweilen ein. Die Natursteinwand und das warme Holz schaffen eine Atmosphäre, in der man nach einem Tag im Schnee einfach abschalten kann.</p>
       <p data-de="Vom Esstisch für acht Personen bis zum gemütlichen Sofa-Abend vor dem Smart-TV – hier verbringt man die schönsten Stunden gemeinsam." data-en="From the dining table for eight to a cosy sofa evening in front of the smart TV – this is where the best hours are spent together." data-fr="De la table à manger pour huit personnes à une soirée cosy sur le canapé devant le Smart-TV – c'est ici que l'on passe ensemble les plus belles heures." data-it="Dal tavolo da pranzo per otto persone a una serata accogliente sul divano davanti allo Smart-TV – è qui che si trascorrono insieme le ore più belle.">Vom Esstisch für acht Personen bis zum gemütlichen Sofa-Abend vor dem Smart-TV – hier verbringt man die schönsten Stunden gemeinsam.</p>
     </div>
-    <div class="split-img land"><div class="ph" style="background-image:url('images/07.jpg')"></div></div>
+    <div class="split-img land"><div class="ph" style="background-image:url('images/07.jpg');background-image:image-set(url('images/07.webp') type('image/webp'), url('images/07.jpg') type('image/jpeg'))"></div></div>
   </div>
 </section>
 
@@ -357,7 +366,7 @@
       <p data-de="Drei ruhige Schlafzimmer mit gemütlichen Betten und stilvollen Details im Alpenchic-Look sorgen für erholsame Nächte. Das Hauptschlafzimmer überzeugt mit eigenem En-Suite-Bad und direktem Zugang zur Terrasse – Morgenkaffee mit Bergblick inklusive." data-en="Three peaceful bedrooms with cosy beds and tasteful alpine-chic details ensure restful nights. The master bedroom impresses with its own en-suite bathroom and direct terrace access – morning coffee with a mountain view included." data-fr="Trois chambres paisibles, dotées de lits douillets et de détails raffinés au look chic alpin, garantissent des nuits reposantes. La chambre principale séduit par sa salle de bain attenante et son accès direct à la terrasse – café du matin avec vue sur les montagnes inclus." data-it="Tre tranquille camere da letto, con letti accoglienti e raffinati dettagli in stile chic alpino, garantiscono notti riposanti. La camera principale conquista con il suo bagno en-suite e l'accesso diretto alla terrazza – caffè del mattino con vista sulle montagne incluso.">Drei ruhige Schlafzimmer mit gemütlichen Betten und stilvollen Details im Alpenchic-Look sorgen für erholsame Nächte. Das Hauptschlafzimmer überzeugt mit eigenem En-Suite-Bad und direktem Zugang zur Terrasse – Morgenkaffee mit Bergblick inklusive.</p>
       <p data-de="Zwei moderne Badezimmer bieten genug Komfort, auch wenn die Wohnung voll belegt ist." data-en="Two modern bathrooms provide plenty of comfort, even when the apartment is fully booked." data-fr="Deux salles de bain modernes offrent un grand confort, même lorsque l'appartement est complet." data-it="Due bagni moderni offrono ampio comfort, anche quando l'appartamento è al completo.">Zwei moderne Badezimmer bieten genug Komfort, auch wenn die Wohnung voll belegt ist.</p>
     </div>
-    <div class="split-img"><div class="ph" style="background-image:url('images/03.jpg')"></div></div>
+    <div class="split-img"><div class="ph" style="background-image:url('images/03.jpg');background-image:image-set(url('images/03.webp') type('image/webp'), url('images/03.jpg') type('image/jpeg'))"></div></div>
   </div>
 </section>
 
@@ -369,15 +378,15 @@
       <h2 data-de="Ein Blick in die Casa Bella" data-en="A look inside Casa Bella" data-fr="Un regard à l'intérieur de la Casa Bella" data-it="Uno sguardo all'interno della Casa Bella">Ein Blick in die Casa Bella</h2>
     </div>
     <div class="gallery reveal">
-      <div class="gitem big" role="img" aria-label="Sonnenterrasse der Casa Bella mit Blick auf die Aroser Bergkirche und verschneite Gipfel" data-img="images/01.jpg"><div class="ph" style="background-image:url('images/01.jpg')"></div></div>
-      <div class="gitem" role="img" aria-label="Offene Designerküche mit Kochinsel und Geweihleuchter" data-img="images/05.jpg"><div class="ph" style="background-image:url('images/05.jpg')"></div></div>
-      <div class="gitem" role="img" aria-label="Hochwertige schwarze Designküche mit Terrassenzugang und Bergblick" data-img="images/04.jpg"><div class="ph" style="background-image:url('images/04.jpg')"></div></div>
-      <div class="gitem tall" role="img" aria-label="Heller Wohn- und Essbereich im Alpenchic-Stil mit Altholz" data-img="images/08.jpg"><div class="ph" style="background-image:url('images/08.jpg')"></div></div>
-      <div class="gitem" role="img" aria-label="Esszimmer mit massivem Altholztisch und Geweihleuchter" data-img="images/06.jpg"><div class="ph" style="background-image:url('images/06.jpg')"></div></div>
-      <div class="gitem wide" role="img" aria-label="Gemütliches Wohnzimmer mit Sofas, Natursteinwand und Smart-TV" data-img="images/07.jpg"><div class="ph" style="background-image:url('images/07.jpg')"></div></div>
-      <div class="gitem" role="img" aria-label="Wohnbereich mit Naturstein-Wand und Steinbock-Trophäe" data-img="images/09.jpg"><div class="ph" style="background-image:url('images/09.jpg')"></div></div>
-      <div class="gitem" role="img" aria-label="Eingangsbereich mit Altholz-Garderobe" data-img="images/02.jpg"><div class="ph" style="background-image:url('images/02.jpg')"></div></div>
-      <div class="gitem" role="img" aria-label="Schlafzimmer mit Doppelbett im Alpenchic-Stil" data-img="images/03.jpg"><div class="ph" style="background-image:url('images/03.jpg')"></div></div>
+      <div class="gitem big" role="img" aria-label="Sonnenterrasse der Casa Bella mit Blick auf die Aroser Bergkirche und verschneite Gipfel" data-img="images/01.jpg"><div class="ph" style="background-image:url('images/01.jpg');background-image:image-set(url('images/01.webp') type('image/webp'), url('images/01.jpg') type('image/jpeg'))"></div></div>
+      <div class="gitem" role="img" aria-label="Offene Designerküche mit Kochinsel und Geweihleuchter" data-img="images/05.jpg"><div class="ph" style="background-image:url('images/05.jpg');background-image:image-set(url('images/05.webp') type('image/webp'), url('images/05.jpg') type('image/jpeg'))"></div></div>
+      <div class="gitem" role="img" aria-label="Hochwertige schwarze Designküche mit Terrassenzugang und Bergblick" data-img="images/04.jpg"><div class="ph" style="background-image:url('images/04.jpg');background-image:image-set(url('images/04.webp') type('image/webp'), url('images/04.jpg') type('image/jpeg'))"></div></div>
+      <div class="gitem tall" role="img" aria-label="Heller Wohn- und Essbereich im Alpenchic-Stil mit Altholz" data-img="images/08.jpg"><div class="ph" style="background-image:url('images/08.jpg');background-image:image-set(url('images/08.webp') type('image/webp'), url('images/08.jpg') type('image/jpeg'))"></div></div>
+      <div class="gitem" role="img" aria-label="Esszimmer mit massivem Altholztisch und Geweihleuchter" data-img="images/06.jpg"><div class="ph" style="background-image:url('images/06.jpg');background-image:image-set(url('images/06.webp') type('image/webp'), url('images/06.jpg') type('image/jpeg'))"></div></div>
+      <div class="gitem wide" role="img" aria-label="Gemütliches Wohnzimmer mit Sofas, Natursteinwand und Smart-TV" data-img="images/07.jpg"><div class="ph" style="background-image:url('images/07.jpg');background-image:image-set(url('images/07.webp') type('image/webp'), url('images/07.jpg') type('image/jpeg'))"></div></div>
+      <div class="gitem" role="img" aria-label="Wohnbereich mit Naturstein-Wand und Steinbock-Trophäe" data-img="images/09.jpg"><div class="ph" style="background-image:url('images/09.jpg');background-image:image-set(url('images/09.webp') type('image/webp'), url('images/09.jpg') type('image/jpeg'))"></div></div>
+      <div class="gitem" role="img" aria-label="Eingangsbereich mit Altholz-Garderobe" data-img="images/02.jpg"><div class="ph" style="background-image:url('images/02.jpg');background-image:image-set(url('images/02.webp') type('image/webp'), url('images/02.jpg') type('image/jpeg'))"></div></div>
+      <div class="gitem" role="img" aria-label="Schlafzimmer mit Doppelbett im Alpenchic-Stil" data-img="images/03.jpg"><div class="ph" style="background-image:url('images/03.jpg');background-image:image-set(url('images/03.webp') type('image/webp'), url('images/03.jpg') type('image/jpeg'))"></div></div>
     </div>
   </div>
 </section>
@@ -396,16 +405,16 @@
     </div>
     <div class="season-pane active" data-pane="winter">
       <div class="act-grid reveal">
-        <div class="act"><div class="ph" style="background-image:url('images/arosa/w_pisten.jpg')"></div><div class="act-cap"><h3 data-de="225 km Pisten" data-en="225 km of slopes" data-fr="225 km de pistes" data-it="225 km di piste">225 km Pisten</h3><p data-de="Skigebiet Arosa Lenzerheide" data-en="Arosa Lenzerheide ski area" data-fr="Domaine skiable Arosa Lenzerheide" data-it="Comprensorio sciistico Arosa Lenzerheide">Skigebiet Arosa Lenzerheide</p></div></div>
-        <div class="act"><div class="ph" style="background-image:url('images/arosa/w_panorama.jpg')"></div><div class="act-cap"><h3 data-de="Winterwandern" data-en="Winter hiking" data-fr="Randonnée hivernale" data-it="Escursioni invernali">Winterwandern</h3><p data-de="Verschneite Wege & Bergpanorama" data-en="Snowy trails & mountain panorama" data-fr="Sentiers enneigés & panorama montagnard" data-it="Sentieri innevati & panorama montano">Verschneite Wege & Bergpanorama</p></div></div>
-        <div class="act"><div class="ph" style="background-image:url('images/arosa/w_eis.jpg')"></div><div class="act-cap"><h3 data-de="Eislaufen am Obersee" data-en="Skating on the Obersee" data-fr="Patinage sur l'Obersee" data-it="Pattinaggio sull'Obersee">Eislaufen am Obersee</h3><p data-de="Natureisfeld mitten im Dorf" data-en="Natural ice rink in the village" data-fr="Patinoire naturelle au cœur du village" data-it="Pista di ghiaccio naturale nel cuore del villaggio">Natureisfeld mitten im Dorf</p></div></div>
+        <div class="act"><div class="ph" style="background-image:url('images/arosa/w_pisten.jpg');background-image:image-set(url('images/arosa/w_pisten.webp') type('image/webp'), url('images/arosa/w_pisten.jpg') type('image/jpeg'))"></div><div class="act-cap"><h3 data-de="225 km Pisten" data-en="225 km of slopes" data-fr="225 km de pistes" data-it="225 km di piste">225 km Pisten</h3><p data-de="Skigebiet Arosa Lenzerheide" data-en="Arosa Lenzerheide ski area" data-fr="Domaine skiable Arosa Lenzerheide" data-it="Comprensorio sciistico Arosa Lenzerheide">Skigebiet Arosa Lenzerheide</p></div></div>
+        <div class="act"><div class="ph" style="background-image:url('images/arosa/w_panorama.jpg');background-image:image-set(url('images/arosa/w_panorama.webp') type('image/webp'), url('images/arosa/w_panorama.jpg') type('image/jpeg'))"></div><div class="act-cap"><h3 data-de="Winterwandern" data-en="Winter hiking" data-fr="Randonnée hivernale" data-it="Escursioni invernali">Winterwandern</h3><p data-de="Verschneite Wege & Bergpanorama" data-en="Snowy trails & mountain panorama" data-fr="Sentiers enneigés & panorama montagnard" data-it="Sentieri innevati & panorama montano">Verschneite Wege & Bergpanorama</p></div></div>
+        <div class="act"><div class="ph" style="background-image:url('images/arosa/w_eis.jpg');background-image:image-set(url('images/arosa/w_eis.webp') type('image/webp'), url('images/arosa/w_eis.jpg') type('image/jpeg'))"></div><div class="act-cap"><h3 data-de="Eislaufen am Obersee" data-en="Skating on the Obersee" data-fr="Patinage sur l'Obersee" data-it="Pattinaggio sull'Obersee">Eislaufen am Obersee</h3><p data-de="Natureisfeld mitten im Dorf" data-en="Natural ice rink in the village" data-fr="Patinoire naturelle au cœur du village" data-it="Pista di ghiaccio naturale nel cuore del villaggio">Natureisfeld mitten im Dorf</p></div></div>
       </div>
     </div>
     <div class="season-pane" data-pane="sommer">
       <div class="act-grid reveal">
-        <div class="act"><div class="ph" style="background-image:url('images/arosa/s_wandern.jpg')"></div><div class="act-cap"><h3 data-de="300 km Wanderwege" data-en="300 km of trails" data-fr="300 km de sentiers" data-it="300 km di sentieri">300 km Wanderwege</h3><p data-de="Von gemütlich bis hochalpin" data-en="From easy to high-alpine" data-fr="De la balade tranquille à la haute montagne" data-it="Dalla passeggiata tranquilla all'alta montagna">Von gemütlich bis hochalpin</p></div></div>
-        <div class="act"><div class="ph" style="background-image:url('images/arosa/s_seen.jpg')"></div><div class="act-cap"><h3 data-de="Glasklare Bergseen" data-en="Crystal-clear lakes" data-fr="Lacs de montagne cristallins" data-it="Laghi di montagna cristallini">Glasklare Bergseen</h3><p data-de="Ober- & Untersee mitten in Arosa" data-en="Ober- & Untersee right in Arosa" data-fr="Obersee & Untersee au cœur d'Arosa" data-it="Obersee & Untersee nel cuore di Arosa">Ober- & Untersee mitten in Arosa</p></div></div>
-        <div class="act"><div class="ph" style="background-image:url('images/arosa/s_dorf.jpg')"></div><div class="act-cap"><h3 data-de="Bergdorf Arosa" data-en="Arosa mountain village" data-fr="Village de montagne d'Arosa" data-it="Villaggio di montagna di Arosa">Bergdorf Arosa</h3><p data-de="Zentrum, Restaurants & Bärenland" data-en="Centre, restaurants & bear sanctuary" data-fr="Centre, restaurants & parc aux ours d'Arosa" data-it="Centro, ristoranti & parco degli orsi di Arosa">Zentrum, Restaurants & Bärenland</p></div></div>
+        <div class="act"><div class="ph" style="background-image:url('images/arosa/s_wandern.jpg');background-image:image-set(url('images/arosa/s_wandern.webp') type('image/webp'), url('images/arosa/s_wandern.jpg') type('image/jpeg'))"></div><div class="act-cap"><h3 data-de="300 km Wanderwege" data-en="300 km of trails" data-fr="300 km de sentiers" data-it="300 km di sentieri">300 km Wanderwege</h3><p data-de="Von gemütlich bis hochalpin" data-en="From easy to high-alpine" data-fr="De la balade tranquille à la haute montagne" data-it="Dalla passeggiata tranquilla all'alta montagna">Von gemütlich bis hochalpin</p></div></div>
+        <div class="act"><div class="ph" style="background-image:url('images/arosa/s_seen.jpg');background-image:image-set(url('images/arosa/s_seen.webp') type('image/webp'), url('images/arosa/s_seen.jpg') type('image/jpeg'))"></div><div class="act-cap"><h3 data-de="Glasklare Bergseen" data-en="Crystal-clear lakes" data-fr="Lacs de montagne cristallins" data-it="Laghi di montagna cristallini">Glasklare Bergseen</h3><p data-de="Ober- & Untersee mitten in Arosa" data-en="Ober- & Untersee right in Arosa" data-fr="Obersee & Untersee au cœur d'Arosa" data-it="Obersee & Untersee nel cuore di Arosa">Ober- & Untersee mitten in Arosa</p></div></div>
+        <div class="act"><div class="ph" style="background-image:url('images/arosa/s_dorf.jpg');background-image:image-set(url('images/arosa/s_dorf.webp') type('image/webp'), url('images/arosa/s_dorf.jpg') type('image/jpeg'))"></div><div class="act-cap"><h3 data-de="Bergdorf Arosa" data-en="Arosa mountain village" data-fr="Village de montagne d'Arosa" data-it="Villaggio di montagna di Arosa">Bergdorf Arosa</h3><p data-de="Zentrum, Restaurants & Bärenland" data-en="Centre, restaurants & bear sanctuary" data-fr="Centre, restaurants & parc aux ours d'Arosa" data-it="Centro, ristoranti & parco degli orsi di Arosa">Zentrum, Restaurants & Bärenland</p></div></div>
       </div>
     </div>
   </div>
@@ -492,7 +501,7 @@
 
 <!-- CTA -->
 <section class="cta" id="buchen">
-  <div class="cta-bg" style="background-image:url('images/04.jpg')"></div>
+  <div class="cta-bg" style="background-image:url('images/04.jpg');background-image:image-set(url('images/04.webp') type('image/webp'), url('images/04.jpg') type('image/jpeg'))"></div>
   <div class="wrap reveal">
     <div class="eyebrow" data-de="Verfügbarkeit & Buchung" data-en="Availability & Booking" data-fr="Disponibilité & réservation" data-it="Disponibilità & prenotazione">Verfügbarkeit & Buchung</div>
     <h2 data-de="Bereit für Ihre Auszeit?" data-en="Ready for your getaway?" data-fr="Prêt pour votre escapade ?" data-it="Pronti per la vostra pausa?">Bereit für Ihre Auszeit?</h2>
@@ -588,6 +597,26 @@
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
   },{threshold:.14});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // sanfter Hero-Parallax (kollidiert nicht mit dem Zoom)
+  const heroImg=document.querySelector('.hero-img');
+  addEventListener('scroll',()=>{ if(heroImg && scrollY < innerHeight){ heroImg.style.backgroundPositionY=(50 + scrollY*0.03)+'%'; } },{passive:true});
+
+  // Skifahrer fährt beim Scrollen diagonal hinter dem Inhalt herunter (ab "Die Wohnung")
+  const skier=document.getElementById('skier');
+  const skiStart=document.getElementById('wohnung');
+  function moveSkier(){
+    if(!skier||!skiStart) return;
+    const start=skiStart.offsetTop - innerHeight*0.6;
+    const end=document.body.scrollHeight - innerHeight*1.2;
+    const p=Math.min(1,Math.max(0,(scrollY-start)/Math.max(1,end-start)));
+    skier.style.opacity=(p>0.02 && p<0.98)?'0.5':'0';
+    skier.style.top=(2 + p*84)+'vh';
+    skier.style.left=(3 + p*17)+'%';
+  }
+  addEventListener('scroll',moveSkier,{passive:true});
+  addEventListener('resize',moveSkier);
+  moveSkier();
 
   // lightbox
   const items = [...document.querySelectorAll('.gitem')];

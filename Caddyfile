@@ -12,9 +12,9 @@
 		-Server
 	}
 
-	# Caching: Bilder lange, HTML kurz
+	# Bilder lange cachen, HTML immer frisch (revalidieren)
 	@img path /images/*
 	header @img Cache-Control "public, max-age=2592000, immutable"
 	@html path *.html /
-	header @html Cache-Control "public, max-age=3600"
+	header @html Cache-Control "no-cache, must-revalidate"
 }

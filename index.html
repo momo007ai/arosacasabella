@@ -695,14 +695,20 @@
   if(mapEl && window.L){
     let done=false;
     const mo=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting && !done){done=true;
-      const map=L.map('arosaMap',{scrollWheelZoom:false}).setView([46.7818,9.6788],15);
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:'© OpenStreetMap, © CARTO'}).addTo(map);
-      const pin=(lat,lng,t,main)=>L.circleMarker([lat,lng],{radius:main?10:7,color:'#231e18',weight:2,fillColor:'#d3a572',fillOpacity:1}).addTo(map).bindPopup('<b>'+t+'</b>');
+      const map=L.map('arosaMap',{scrollWheelZoom:false});
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'}).addTo(map);
+      const pts=[];
+      const pin=(lat,lng,t,main)=>{pts.push([lat,lng]);return L.circleMarker([lat,lng],{radius:main?10:7,color:'#231e18',weight:2,fillColor:main?'#d3a572':'#c08a4e',fillOpacity:1}).addTo(map).bindPopup('<b>'+t+'</b>');};
+      const lift=(lat,lng,t)=>{pts.push([lat,lng]);return L.circleMarker([lat,lng],{radius:7,color:'#fff',weight:2,fillColor:'#9a6b3f',fillOpacity:1}).addTo(map).bindPopup('🚠 <b>'+t+'</b>');};
       pin(46.7818,9.6788,'Casa Bella',true).openPopup();
       pin(46.7818,9.6805,'Aroser Bergkirche');
       pin(46.7806,9.6788,'Bahnhof Arosa (RhB)');
       pin(46.7795,9.6760,'Obersee');
-      pin(46.7790,9.6735,'Bergbahn · Skigebiet');
+      lift(46.7796,9.6730,'Weisshornbahn · Talstation');
+      lift(46.7702,9.6612,'Hörnli-Express · Innerarosa');
+      lift(46.7815,9.6665,'Carmenna-Sesselbahn');
+      lift(46.7865,9.6805,'Tschuggen-Express');
+      map.fitBounds(pts,{padding:[40,40],maxZoom:15});
       setTimeout(()=>map.invalidateSize(),250);
       mo.disconnect();
     }});},{threshold:.15});

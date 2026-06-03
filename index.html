@@ -13,9 +13,9 @@
 <meta name="theme-color" content="#11100e" />
 <link rel="canonical" href="https://www.casabellaarosa.ch/" />
 <link rel="alternate" hreflang="de" href="https://www.casabellaarosa.ch/" />
-<link rel="alternate" hreflang="en" href="https://www.casabellaarosa.ch/" />
-<link rel="alternate" hreflang="fr" href="https://www.casabellaarosa.ch/" />
-<link rel="alternate" hreflang="it" href="https://www.casabellaarosa.ch/" />
+<link rel="alternate" hreflang="en" href="https://www.casabellaarosa.ch/en/" />
+<link rel="alternate" hreflang="fr" href="https://www.casabellaarosa.ch/fr/" />
+<link rel="alternate" hreflang="it" href="https://www.casabellaarosa.ch/it/" />
 <link rel="alternate" hreflang="x-default" href="https://www.casabellaarosa.ch/" />
 
 <!-- Geo / Local SEO -->
@@ -94,8 +94,8 @@
   .nav-links a{font-size:.82rem;letter-spacing:.08em;color:var(--text);opacity:.85;transition:opacity .25s,color .25s}
   .nav-links a:hover{opacity:1;color:var(--wood-light)}
   .lang{display:flex;gap:2px;border:1px solid var(--line);border-radius:30px;padding:3px;margin-left:6px}
-  .lang button{background:none;border:none;color:var(--muted);cursor:pointer;font-family:inherit;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:5px 12px;border-radius:30px;transition:all .25s}
-  .lang button.active{background:var(--wood);color:#fff}
+  .lang a{background:none;border:none;color:var(--muted);cursor:pointer;font-family:inherit;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:5px 12px;border-radius:30px;transition:all .25s;text-decoration:none}
+  .lang a.active{background:var(--wood);color:#fff}
   @media(max-width:820px){.nav-links a:not(.btn-link){display:none}}
 
   /* HERO */
@@ -248,7 +248,7 @@
   .brand{font-size:1.95rem}
   .hero h1{font-size:clamp(3.4rem,9vw,6.8rem);line-height:1.18;margin:30px 0 14px;text-shadow:0 2px 30px rgba(0,0,0,.45)}
 
-  @media(max-width:520px){.lang button{padding:5px 9px;font-size:.68rem}nav{padding:16px 18px}}
+  @media(max-width:520px){.lang a{padding:5px 9px;font-size:.68rem}nav{padding:16px 18px}}
   @media(max-width:760px){.split,.split.alt{grid-template-columns:1fr;direction:ltr}.split-img{aspect-ratio:5/4;max-height:440px}}
 </style>
 </head>
@@ -267,10 +267,10 @@
     <a href="#arosa" data-de="Arosa erleben" data-en="Discover Arosa" data-fr="Découvrir Arosa" data-it="Scoprire Arosa">Arosa erleben</a>
     <a href="#buchen" class="btn-link" data-de="Buchen" data-en="Book" data-fr="Réserver" data-it="Prenotare">Buchen</a>
     <div class="lang">
-      <button data-lang="de" class="active">DE</button>
-      <button data-lang="en">EN</button>
-      <button data-lang="fr">FR</button>
-      <button data-lang="it">IT</button>
+      <a href="/" data-lang="de">DE</a>
+      <a href="/en/" data-lang="en">EN</a>
+      <a href="/fr/" data-lang="fr">FR</a>
+      <a href="/it/" data-lang="it">IT</a>
     </div>
   </div>
 </nav>
@@ -571,17 +571,8 @@
   const nav = document.getElementById('nav');
   addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40));
 
-  // language toggle
-  const langBtns = document.querySelectorAll('.lang button');
-  function setLang(lang){
-    document.documentElement.lang = lang;
-    document.querySelectorAll('[data-de]').forEach(el=>{
-      const v = el.getAttribute('data-'+lang);
-      if(v!=null) el.innerHTML = v;
-    });
-    langBtns.forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
-  }
-  langBtns.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+  // language switcher: highlight the active language link
+  document.querySelectorAll('.lang a').forEach(a=>a.classList.toggle('active', a.getAttribute('data-lang')===document.documentElement.lang));
 
   // season tabs
   document.querySelectorAll('.season-tabs button').forEach(btn=>{

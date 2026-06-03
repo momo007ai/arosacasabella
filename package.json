@@ -1,0 +1,24 @@
+{
+  "name": "arosa_ferienwohnung",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/momo007ai/arosacasabella.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/momo007ai/arosacasabella/issues"
+  },
+  "homepage": "https://github.com/momo007ai/arosacasabella#readme",
+  "dependencies": {
+    "jsdom": "^29.1.1"
+  }
+}

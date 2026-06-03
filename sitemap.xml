@@ -8,13 +8,48 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.casabellaarosa.ch/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.casabellaarosa.ch/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.casabellaarosa.ch/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.casabellaarosa.ch/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.casabellaarosa.ch/it/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.casabellaarosa.ch/"/>
     <image:image><image:loc>https://www.casabellaarosa.ch/images/01.jpg</image:loc><image:caption>Sonnenterrasse der Casa Bella mit Blick auf die Aroser Bergkirche</image:caption></image:image>
     <image:image><image:loc>https://www.casabellaarosa.ch/images/08.jpg</image:loc><image:caption>Heller Wohn- und Essbereich im Alpenchic-Stil</image:caption></image:image>
     <image:image><image:loc>https://www.casabellaarosa.ch/images/04.jpg</image:loc><image:caption>Designerküche mit Terrassenzugang und Bergblick</image:caption></image:image>
     <image:image><image:loc>https://www.casabellaarosa.ch/images/07.jpg</image:loc><image:caption>Wohnzimmer mit Natursteinwand und Geweihleuchter</image:caption></image:image>
     <image:image><image:loc>https://www.casabellaarosa.ch/images/03.jpg</image:loc><image:caption>Schlafzimmer im Alpenchic-Stil</image:caption></image:image>
+  </url>
+  <url>
+    <loc>https://www.casabellaarosa.ch/en/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.casabellaarosa.ch/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.casabellaarosa.ch/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.casabellaarosa.ch/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.casabellaarosa.ch/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.casabellaarosa.ch/"/>
+  </url>
+  <url>
+    <loc>https://www.casabellaarosa.ch/fr/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.casabellaarosa.ch/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.casabellaarosa.ch/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.casabellaarosa.ch/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.casabellaarosa.ch/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.casabellaarosa.ch/"/>
+  </url>
+  <url>
+    <loc>https://www.casabellaarosa.ch/it/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.casabellaarosa.ch/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.casabellaarosa.ch/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.casabellaarosa.ch/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.casabellaarosa.ch/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.casabellaarosa.ch/"/>
   </url>
   <url>
     <loc>https://www.casabellaarosa.ch/impressum.html</loc>

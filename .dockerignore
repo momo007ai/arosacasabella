@@ -2,3 +2,7 @@
 .gitignore
 *.md
 .dockerignore
+node_modules
+package.json
+package-lock.json
+build-lang.js

@@ -14,6 +14,8 @@
 <link rel="canonical" href="https://www.casabellaarosa.ch/" />
 <link rel="alternate" hreflang="de" href="https://www.casabellaarosa.ch/" />
 <link rel="alternate" hreflang="en" href="https://www.casabellaarosa.ch/" />
+<link rel="alternate" hreflang="fr" href="https://www.casabellaarosa.ch/" />
+<link rel="alternate" hreflang="it" href="https://www.casabellaarosa.ch/" />
 <link rel="alternate" hreflang="x-default" href="https://www.casabellaarosa.ch/" />
 
 <!-- Geo / Local SEO -->
@@ -36,6 +38,8 @@
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:locale" content="de_CH" />
 <meta property="og:locale:alternate" content="en_GB" />
+<meta property="og:locale:alternate" content="fr_CH" />
+<meta property="og:locale:alternate" content="it_CH" />
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
@@ -221,6 +225,15 @@
   .faq-list details[open] summary::after{transform:rotate(45deg)}
   .faq-list .faq-a{padding:0 26px 24px;color:var(--muted);font-size:.98rem}
 
+  /* PRESS */
+  .press{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 0}
+  .press .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px}
+  .press-label{font-size:.7rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+  .press-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.5vw,2.3rem);color:var(--cream);transition:color .25s}
+  .press-title:hover{color:var(--wood-light)}
+  .press-sub{font-size:.85rem;color:var(--muted)}
+
+  @media(max-width:520px){.lang button{padding:5px 9px;font-size:.68rem}nav{padding:16px 18px}}
   @media(max-width:760px){.split,.split.alt{grid-template-columns:1fr;direction:ltr}.split-img{aspect-ratio:5/4;max-height:440px}}
 </style>
 </head>
@@ -230,14 +243,16 @@
 <nav id="nav">
   <a href="#top" class="brand">Casa <span>Bella</span></a>
   <div class="nav-links">
-    <a href="#wohnung" data-de="Die Wohnung" data-en="The Apartment">Die Wohnung</a>
-    <a href="#ausstattung" data-de="Ausstattung" data-en="Amenities">Ausstattung</a>
-    <a href="#galerie" data-de="Galerie" data-en="Gallery">Galerie</a>
-    <a href="#arosa" data-de="Arosa erleben" data-en="Discover Arosa">Arosa erleben</a>
-    <a href="#buchen" class="btn-link" data-de="Buchen" data-en="Book">Buchen</a>
+    <a href="#wohnung" data-de="Die Wohnung" data-en="The Apartment" data-fr="L'appartement" data-it="L'appartamento">Die Wohnung</a>
+    <a href="#ausstattung" data-de="Ausstattung" data-en="Amenities" data-fr="Équipements" data-it="Dotazioni">Ausstattung</a>
+    <a href="#galerie" data-de="Galerie" data-en="Gallery" data-fr="Galerie" data-it="Galleria">Galerie</a>
+    <a href="#arosa" data-de="Arosa erleben" data-en="Discover Arosa" data-fr="Découvrir Arosa" data-it="Scoprire Arosa">Arosa erleben</a>
+    <a href="#buchen" class="btn-link" data-de="Buchen" data-en="Book" data-fr="Réserver" data-it="Prenotare">Buchen</a>
     <div class="lang">
       <button data-lang="de" class="active">DE</button>
       <button data-lang="en">EN</button>
+      <button data-lang="fr">FR</button>
+      <button data-lang="it">IT</button>
     </div>
   </div>
 </nav>
@@ -246,35 +261,44 @@
 <header class="hero" id="top">
   <div class="hero-img" style="background-image:url('images/08.jpg')"></div>
   <div class="hero-inner">
-    <div class="eyebrow" data-de="Alpenchic-Ferienwohnung · 7050 Arosa" data-en="Alpine-Chic Holiday Apartment · 7050 Arosa">Alpenchic-Ferienwohnung · 7050 Arosa</div>
-    <h1 data-de="Casa Bella<span class='visually-hidden'> – Luxus-Ferienwohnung in Arosa mieten</span>" data-en="Casa Bella<span class='visually-hidden'> – luxury holiday apartment for rent in Arosa</span>">Casa Bella<span class="visually-hidden"> – Luxus-Ferienwohnung in Arosa mieten</span></h1>
-    <p data-de="142 m² alpiner Luxus auf 1800 Metern – mit 73 m² Sonnenterrasse und freiem Blick auf die Aroser Bergkirche und die Gipfel ringsum." data-en="142 m² of alpine luxury at 1,800 metres – with a 73 m² sun terrace and open views of the Arosa mountain church and the surrounding peaks.">142 m² alpiner Luxus auf 1800 Metern – mit 73 m² Sonnenterrasse und freiem Blick auf die Aroser Bergkirche und die Gipfel ringsum.</p>
+    <div class="eyebrow" data-de="Alpenchic-Ferienwohnung · 7050 Arosa" data-en="Alpine-Chic Holiday Apartment · 7050 Arosa" data-fr="Appartement de vacances chic alpin · 7050 Arosa" data-it="Appartamento di vacanza chic alpino · 7050 Arosa">Alpenchic-Ferienwohnung · 7050 Arosa</div>
+    <h1 data-de="Casa Bella<span class='visually-hidden'> – Luxus-Ferienwohnung in Arosa mieten</span>" data-en="Casa Bella<span class='visually-hidden'> – luxury holiday apartment for rent in Arosa</span>" data-fr="Casa Bella<span class='visually-hidden'> – appartement de vacances de luxe à louer à Arosa</span>" data-it="Casa Bella<span class='visually-hidden'> – appartamento di vacanza di lusso in affitto ad Arosa</span>">Casa Bella<span class="visually-hidden"> – Luxus-Ferienwohnung in Arosa mieten</span></h1>
+    <p data-de="142 m² alpiner Luxus auf 1800 Metern – mit 73 m² Sonnenterrasse und freiem Blick auf die Aroser Bergkirche und die Gipfel ringsum." data-en="142 m² of alpine luxury at 1,800 metres – with a 73 m² sun terrace and open views of the Arosa mountain church and the surrounding peaks." data-fr="142 m² de luxe alpin à 1800 mètres d'altitude – avec une terrasse ensoleillée de 73 m² et une vue dégagée sur l'église de montagne d'Arosa et les sommets alentour." data-it="142 m² di lusso alpino a 1800 metri di altitudine – con una terrazza soleggiata di 73 m² e una vista libera sulla chiesa di montagna di Arosa e sulle vette circostanti.">142 m² alpiner Luxus auf 1800 Metern – mit 73 m² Sonnenterrasse und freiem Blick auf die Aroser Bergkirche und die Gipfel ringsum.</p>
     <div class="hero-meta">
-      <span><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg> <span data-de="3 Schlafzimmer" data-en="3 Bedrooms">3 Schlafzimmer</span></span>
-      <span><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><circle cx="16" cy="9" r="2.4"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M14 20c0-2 2-3.5 4-3.5s4 1.5 4 3.5"/></svg> <span data-de="Bis 8 Gäste" data-en="Up to 8 Guests">Bis 8 Gäste</span></span>
-      <span><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8h14v13M3 8l9-5 9 5"/></svg> <span data-de="142 m² + 73 m² Terrasse" data-en="142 m² + 73 m² terrace">142 m² + 73 m² Terrasse</span></span>
-      <span><svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .5-5.5 4.5L18 21l-6-4-6 4 1.5-7L2 9.5 9 9z"/></svg> <span data-de="Zentral & ruhig" data-en="Central & quiet">Zentral & ruhig</span></span>
+      <span><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg> <span data-de="3 Schlafzimmer" data-en="3 Bedrooms" data-fr="3 chambres" data-it="3 camere da letto">3 Schlafzimmer</span></span>
+      <span><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><circle cx="16" cy="9" r="2.4"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M14 20c0-2 2-3.5 4-3.5s4 1.5 4 3.5"/></svg> <span data-de="Bis 8 Gäste" data-en="Up to 8 Guests" data-fr="Jusqu'à 8 hôtes" data-it="Fino a 8 ospiti">Bis 8 Gäste</span></span>
+      <span><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8h14v13M3 8l9-5 9 5"/></svg> <span data-de="142 m² + 73 m² Terrasse" data-en="142 m² + 73 m² terrace" data-fr="142 m² + 73 m² de terrasse" data-it="142 m² + 73 m² di terrazza">142 m² + 73 m² Terrasse</span></span>
+      <span><svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .5-5.5 4.5L18 21l-6-4-6 4 1.5-7L2 9.5 9 9z"/></svg> <span data-de="Zentral & ruhig" data-en="Central & quiet" data-fr="Central & paisible" data-it="Centrale & tranquillo">Zentral & ruhig</span></span>
     </div>
     <div class="btn-row">
-      <a href="#buchen" class="btn btn-primary" data-de="Verfügbarkeit & Buchung" data-en="Availability & Booking">Verfügbarkeit & Buchung</a>
-      <a href="#galerie" class="btn btn-ghost" data-de="Galerie ansehen" data-en="View gallery">Galerie ansehen</a>
+      <a href="#buchen" class="btn btn-primary" data-de="Verfügbarkeit & Buchung" data-en="Availability & Booking" data-fr="Disponibilité & réservation" data-it="Disponibilità & prenotazione">Verfügbarkeit & Buchung</a>
+      <a href="#galerie" class="btn btn-ghost" data-de="Galerie ansehen" data-en="View gallery" data-fr="Voir la galerie" data-it="Vedere la galleria">Galerie ansehen</a>
     </div>
   </div>
   <div class="scroll-cue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M6 13l6 6 6-6"/></svg></div>
 </header>
 
+<!-- PRESS -->
+<aside class="press" aria-label="Pressestimme">
+  <div class="wrap">
+    <span class="press-label" data-de="Bekannt aus" data-en="As featured in" data-fr="Vu dans" data-it="Apparso su">Bekannt aus</span>
+    <a href="https://www.nytimes.com/2024/11/08/realestate/luxury-mountain-apartments-in-switzerland.html" target="_blank" rel="noopener" class="press-title">The New York Times</a>
+    <span class="press-sub" data-de="«Luxury Mountain Apartments in Switzerland» · November 2024" data-en="“Luxury Mountain Apartments in Switzerland” · November 2024" data-fr="« Luxury Mountain Apartments in Switzerland » · novembre 2024" data-it="«Luxury Mountain Apartments in Switzerland» · novembre 2024">«Luxury Mountain Apartments in Switzerland» · November 2024</span>
+  </div>
+</aside>
+
 <!-- INTRO -->
 <section id="wohnung">
   <div class="wrap split reveal">
     <div class="split-text">
-      <div class="eyebrow" data-de="Die Wohnung" data-en="The Apartment">Die Wohnung</div>
-      <h2 data-de="Hochwertiger Alpenchic mit Weitblick" data-en="Refined alpine chic with a view">Hochwertiger Alpenchic mit Weitblick</h2>
-      <p data-de="Die Casa Bella liegt im dritten Obergeschoss der „Casa Valbella“ – eine 4,5-Zimmer-Wohnung, die modernes Design mit echtem Altholz, Naturstein und einem imposanten Geweihleuchter verbindet. Der grosszügige, offene Wohn-, Ess- und Küchenbereich öffnet sich direkt auf die 73 m² grosse Sonnenterrasse." data-en="Casa Bella sits on the third floor of “Casa Valbella” – a 4.5-room apartment that blends modern design with genuine reclaimed wood, natural stone and a striking antler chandelier. The spacious open living, dining and kitchen area opens directly onto the 73 m² sun terrace.">Die Casa Bella liegt im dritten Obergeschoss der „Casa Valbella“ – eine 4,5-Zimmer-Wohnung, die modernes Design mit echtem Altholz, Naturstein und einem imposanten Geweihleuchter verbindet. Der grosszügige, offene Wohn-, Ess- und Küchenbereich öffnet sich direkt auf die 73 m² grosse Sonnenterrasse.</p>
-      <p data-de="Drei Schlafzimmer und zwei Badezimmer bieten Platz für bis zu acht Personen – ideal für Familien und Freunde. Das Hauptschlafzimmer verfügt über ein eigenes En-Suite-Bad und direkten Zugang zur Terrasse." data-en="Three bedrooms and two bathrooms sleep up to eight guests – ideal for families and friends. The master bedroom features its own en-suite bathroom and direct terrace access.">Drei Schlafzimmer und zwei Badezimmer bieten Platz für bis zu acht Personen – ideal für Familien und Freunde. Das Hauptschlafzimmer verfügt über ein eigenes En-Suite-Bad und direkten Zugang zur Terrasse.</p>
+      <div class="eyebrow" data-de="Die Wohnung" data-en="The Apartment" data-fr="L'appartement" data-it="L'appartamento">Die Wohnung</div>
+      <h2 data-de="Hochwertiger Alpenchic mit Weitblick" data-en="Refined alpine chic with a view" data-fr="Un chic alpin raffiné avec vue panoramique" data-it="Raffinato chic alpino con vista panoramica">Hochwertiger Alpenchic mit Weitblick</h2>
+      <p data-de="Die Casa Bella liegt im dritten Obergeschoss der „Casa Valbella“ – eine 4,5-Zimmer-Wohnung, die modernes Design mit echtem Altholz, Naturstein und einem imposanten Geweihleuchter verbindet. Der grosszügige, offene Wohn-, Ess- und Küchenbereich öffnet sich direkt auf die 73 m² grosse Sonnenterrasse." data-en="Casa Bella sits on the third floor of “Casa Valbella” – a 4.5-room apartment that blends modern design with genuine reclaimed wood, natural stone and a striking antler chandelier. The spacious open living, dining and kitchen area opens directly onto the 73 m² sun terrace." data-fr="La Casa Bella se situe au troisième étage de la « Casa Valbella » – un appartement de 4,5 pièces qui marie un design contemporain au vieux bois authentique, à la pierre naturelle et à un imposant lustre en bois de cerf. Le vaste espace ouvert salon, salle à manger et cuisine s'ouvre directement sur la terrasse ensoleillée de 73 m²." data-it="La Casa Bella si trova al terzo piano della « Casa Valbella » – un appartamento di 4,5 locali che unisce un design moderno al legno antico autentico, alla pietra naturale e a un imponente lampadario in corna di cervo. L'ampia zona open space con soggiorno, sala da pranzo e cucina si apre direttamente sulla terrazza soleggiata di 73 m².">Die Casa Bella liegt im dritten Obergeschoss der „Casa Valbella“ – eine 4,5-Zimmer-Wohnung, die modernes Design mit echtem Altholz, Naturstein und einem imposanten Geweihleuchter verbindet. Der grosszügige, offene Wohn-, Ess- und Küchenbereich öffnet sich direkt auf die 73 m² grosse Sonnenterrasse.</p>
+      <p data-de="Drei Schlafzimmer und zwei Badezimmer bieten Platz für bis zu acht Personen – ideal für Familien und Freunde. Das Hauptschlafzimmer verfügt über ein eigenes En-Suite-Bad und direkten Zugang zur Terrasse." data-en="Three bedrooms and two bathrooms sleep up to eight guests – ideal for families and friends. The master bedroom features its own en-suite bathroom and direct terrace access." data-fr="Trois chambres et deux salles de bain accueillent jusqu'à huit personnes – idéal pour les familles et les amis. La chambre principale dispose de sa propre salle de bain attenante et d'un accès direct à la terrasse." data-it="Tre camere da letto e due bagni ospitano fino a otto persone – ideale per famiglie e amici. La camera principale dispone di un bagno en-suite privato e di un accesso diretto alla terrazza.">Drei Schlafzimmer und zwei Badezimmer bieten Platz für bis zu acht Personen – ideal für Familien und Freunde. Das Hauptschlafzimmer verfügt über ein eigenes En-Suite-Bad und direkten Zugang zur Terrasse.</p>
       <div class="stat-row">
-        <div class="stat"><div class="n">142 m²</div><div class="l" data-de="Wohnfläche" data-en="Living area">Wohnfläche</div></div>
-        <div class="stat"><div class="n">73 m²</div><div class="l" data-de="Sonnenterrasse" data-en="Sun terrace">Sonnenterrasse</div></div>
-        <div class="stat"><div class="n">8</div><div class="l" data-de="Gäste" data-en="Guests">Gäste</div></div>
+        <div class="stat"><div class="n">142 m²</div><div class="l" data-de="Wohnfläche" data-en="Living area" data-fr="Surface habitable" data-it="Superficie abitabile">Wohnfläche</div></div>
+        <div class="stat"><div class="n">73 m²</div><div class="l" data-de="Sonnenterrasse" data-en="Sun terrace" data-fr="Terrasse ensoleillée" data-it="Terrazza soleggiata">Sonnenterrasse</div></div>
+        <div class="stat"><div class="n">8</div><div class="l" data-de="Gäste" data-en="Guests" data-fr="Hôtes" data-it="Ospiti">Gäste</div></div>
       </div>
     </div>
     <div class="split-img">
@@ -287,17 +311,17 @@
 <section class="amen-sec" id="ausstattung">
   <div class="wrap">
     <div class="sec-head center reveal">
-      <div class="eyebrow" data-de="Ausstattung" data-en="Amenities">Ausstattung</div>
-      <h2 data-de="An alles gedacht" data-en="Everything you need">An alles gedacht</h2>
-      <p data-de="Komfort, der einen Bergurlaub zum echten Rückzugsort macht." data-en="Comfort that turns a mountain holiday into a true retreat.">Komfort, der einen Bergurlaub zum echten Rückzugsort macht.</p>
+      <div class="eyebrow" data-de="Ausstattung" data-en="Amenities" data-fr="Équipements" data-it="Dotazioni">Ausstattung</div>
+      <h2 data-de="An alles gedacht" data-en="Everything you need" data-fr="Pensé dans les moindres détails" data-it="Pensato in ogni dettaglio">An alles gedacht</h2>
+      <p data-de="Komfort, der einen Bergurlaub zum echten Rückzugsort macht." data-en="Comfort that turns a mountain holiday into a true retreat." data-fr="Un confort qui transforme des vacances à la montagne en véritable refuge." data-it="Un comfort che trasforma una vacanza in montagna in un autentico rifugio.">Komfort, der einen Bergurlaub zum echten Rückzugsort macht.</p>
     </div>
     <div class="amen-grid reveal">
-      <div class="amen"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/><path d="M3 21h18"/></svg><h3 data-de="73 m² Sonnenterrasse" data-en="73 m² Sun Terrace">73 m² Sonnenterrasse</h3><p data-de="Panoramablick auf Bergkirche & Gipfel" data-en="Panoramic view of church & peaks">Panoramablick auf Bergkirche & Gipfel</p></div>
-      <div class="amen"><svg viewBox="0 0 24 24"><path d="M8 2v4M16 2v4M3 10h18"/><rect x="3" y="6" width="18" height="15" rx="2"/></svg><h3 data-de="Design-Küche" data-en="Designer Kitchen">Design-Küche</h3><p data-de="Voll ausgestattet, mit Insel & Backofen" data-en="Fully equipped, island & oven">Voll ausgestattet, mit Insel & Backofen</p></div>
-      <div class="amen"><svg viewBox="0 0 24 24"><path d="M4 20s2-2 8-2 8 2 8 2M6 16V9l6-4 6 4v7"/></svg><h3 data-de="Smart-TV & WLAN" data-en="Smart TV & Wi-Fi">Smart-TV & WLAN</h3><p data-de="Schnelles Internet im ganzen Haus" data-en="Fast internet throughout">Schnelles Internet im ganzen Haus</p></div>
-      <div class="amen"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg><h3 data-de="2 Garagenplätze" data-en="2 Garage Spaces">2 Garagenplätze</h3><p data-de="Direkt zur Wohnung, wettergeschützt" data-en="Right by the apartment, sheltered">Direkt zur Wohnung, wettergeschützt</p></div>
-      <div class="amen"><svg viewBox="0 0 24 24"><path d="M12 2l4 7h-8zM12 9v13M7 22h10"/></svg><h3 data-de="Gemeinschaftl. Skiraum" data-en="Shared Ski Room">Gemeinschaftl. Skiraum</h3><p data-de="Trocken & sicher für die Ausrüstung" data-en="Dry & secure for your gear">Trocken & sicher für die Ausrüstung</p></div>
-      <div class="amen"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="9" rx="2"/><path d="M7 11V8a5 5 0 015-5M7 16h.01M12 16h.01M17 16h.01"/></svg><h3 data-de="Ortsbus vor dem Haus" data-en="Local Bus at the Door">Ortsbus vor dem Haus</h3><p data-de="Kostenfrei – im Nu in den Bergen" data-en="Free – the mountains in minutes">Kostenfrei – im Nu in den Bergen</p></div>
+      <div class="amen"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/><path d="M3 21h18"/></svg><h3 data-de="73 m² Sonnenterrasse" data-en="73 m² Sun Terrace" data-fr="73 m² de terrasse ensoleillée" data-it="73 m² di terrazza soleggiata">73 m² Sonnenterrasse</h3><p data-de="Panoramablick auf Bergkirche & Gipfel" data-en="Panoramic view of church & peaks" data-fr="Vue panoramique sur l'église de montagne & les sommets" data-it="Vista panoramica sulla chiesa di montagna & le vette">Panoramablick auf Bergkirche & Gipfel</p></div>
+      <div class="amen"><svg viewBox="0 0 24 24"><path d="M8 2v4M16 2v4M3 10h18"/><rect x="3" y="6" width="18" height="15" rx="2"/></svg><h3 data-de="Design-Küche" data-en="Designer Kitchen" data-fr="Cuisine design" data-it="Cucina di design">Design-Küche</h3><p data-de="Voll ausgestattet, mit Insel & Backofen" data-en="Fully equipped, island & oven" data-fr="Entièrement équipée, avec îlot & four" data-it="Completamente attrezzata, con isola & forno">Voll ausgestattet, mit Insel & Backofen</p></div>
+      <div class="amen"><svg viewBox="0 0 24 24"><path d="M4 20s2-2 8-2 8 2 8 2M6 16V9l6-4 6 4v7"/></svg><h3 data-de="Smart-TV & WLAN" data-en="Smart TV & Wi-Fi" data-fr="Smart-TV & Wi-Fi" data-it="Smart-TV & Wi-Fi">Smart-TV & WLAN</h3><p data-de="Schnelles Internet im ganzen Haus" data-en="Fast internet throughout" data-fr="Internet rapide dans toute la maison" data-it="Internet veloce in tutta la casa">Schnelles Internet im ganzen Haus</p></div>
+      <div class="amen"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg><h3 data-de="2 Garagenplätze" data-en="2 Garage Spaces" data-fr="2 places de garage" data-it="2 posti garage">2 Garagenplätze</h3><p data-de="Direkt zur Wohnung, wettergeschützt" data-en="Right by the apartment, sheltered" data-fr="Juste à côté de l'appartement, à l'abri des intempéries" data-it="Proprio accanto all'appartamento, al riparo dalle intemperie">Direkt zur Wohnung, wettergeschützt</p></div>
+      <div class="amen"><svg viewBox="0 0 24 24"><path d="M12 2l4 7h-8zM12 9v13M7 22h10"/></svg><h3 data-de="Gemeinschaftl. Skiraum" data-en="Shared Ski Room" data-fr="Local à skis commun" data-it="Deposito sci comune">Gemeinschaftl. Skiraum</h3><p data-de="Trocken & sicher für die Ausrüstung" data-en="Dry & secure for your gear" data-fr="Au sec & en sécurité pour votre équipement" data-it="Asciutto & sicuro per la vostra attrezzatura">Trocken & sicher für die Ausrüstung</p></div>
+      <div class="amen"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="9" rx="2"/><path d="M7 11V8a5 5 0 015-5M7 16h.01M12 16h.01M17 16h.01"/></svg><h3 data-de="Ortsbus vor dem Haus" data-en="Local Bus at the Door" data-fr="Bus local devant la maison" data-it="Bus locale davanti alla casa">Ortsbus vor dem Haus</h3><p data-de="Kostenfrei – im Nu in den Bergen" data-en="Free – the mountains in minutes" data-fr="Gratuit – à la montagne en un instant" data-it="Gratuito – in montagna in un attimo">Kostenfrei – im Nu in den Bergen</p></div>
     </div>
   </div>
 </section>
@@ -306,10 +330,10 @@
 <section>
   <div class="wrap split alt reveal">
     <div class="split-text">
-      <div class="eyebrow" data-de="Wohnen & Geniessen" data-en="Living & Lounging">Wohnen & Geniessen</div>
-      <h2 data-de="Der Raum, in dem man bleiben möchte" data-en="The room you won't want to leave">Der Raum, in dem man bleiben möchte</h2>
-      <p data-de="Zwei grosszügige Sofas, ein massiver Altholztisch und der unverwechselbare Geweihleuchter laden zum Verweilen ein. Die Natursteinwand und das warme Holz schaffen eine Atmosphäre, in der man nach einem Tag im Schnee einfach abschalten kann." data-en="Two generous sofas, a solid reclaimed-wood table and the unmistakable antler chandelier invite you to linger. The natural-stone wall and warm wood create an atmosphere where you can simply unwind after a day in the snow.">Zwei grosszügige Sofas, ein massiver Altholztisch und der unverwechselbare Geweihleuchter laden zum Verweilen ein. Die Natursteinwand und das warme Holz schaffen eine Atmosphäre, in der man nach einem Tag im Schnee einfach abschalten kann.</p>
-      <p data-de="Vom Esstisch für acht Personen bis zum gemütlichen Sofa-Abend vor dem Smart-TV – hier verbringt man die schönsten Stunden gemeinsam." data-en="From the dining table for eight to a cosy sofa evening in front of the smart TV – this is where the best hours are spent together.">Vom Esstisch für acht Personen bis zum gemütlichen Sofa-Abend vor dem Smart-TV – hier verbringt man die schönsten Stunden gemeinsam.</p>
+      <div class="eyebrow" data-de="Wohnen & Geniessen" data-en="Living & Lounging" data-fr="Vivre & savourer" data-it="Vivere & gustare">Wohnen & Geniessen</div>
+      <h2 data-de="Der Raum, in dem man bleiben möchte" data-en="The room you won't want to leave" data-fr="La pièce que l'on ne veut plus quitter" data-it="La stanza che non si vuole più lasciare">Der Raum, in dem man bleiben möchte</h2>
+      <p data-de="Zwei grosszügige Sofas, ein massiver Altholztisch und der unverwechselbare Geweihleuchter laden zum Verweilen ein. Die Natursteinwand und das warme Holz schaffen eine Atmosphäre, in der man nach einem Tag im Schnee einfach abschalten kann." data-en="Two generous sofas, a solid reclaimed-wood table and the unmistakable antler chandelier invite you to linger. The natural-stone wall and warm wood create an atmosphere where you can simply unwind after a day in the snow." data-fr="Deux canapés généreux, une table massive en vieux bois et l'inimitable lustre en bois de cerf invitent à s'attarder. Le mur en pierre naturelle et le bois chaleureux créent une atmosphère où l'on peut tout simplement se détendre après une journée dans la neige." data-it="Due ampi divani, un massiccio tavolo in legno antico e l'inconfondibile lampadario in corna di cervo invitano a indugiare. La parete in pietra naturale e il legno caldo creano un'atmosfera in cui rilassarsi semplicemente dopo una giornata sulla neve.">Zwei grosszügige Sofas, ein massiver Altholztisch und der unverwechselbare Geweihleuchter laden zum Verweilen ein. Die Natursteinwand und das warme Holz schaffen eine Atmosphäre, in der man nach einem Tag im Schnee einfach abschalten kann.</p>
+      <p data-de="Vom Esstisch für acht Personen bis zum gemütlichen Sofa-Abend vor dem Smart-TV – hier verbringt man die schönsten Stunden gemeinsam." data-en="From the dining table for eight to a cosy sofa evening in front of the smart TV – this is where the best hours are spent together." data-fr="De la table à manger pour huit personnes à une soirée cosy sur le canapé devant le Smart-TV – c'est ici que l'on passe ensemble les plus belles heures." data-it="Dal tavolo da pranzo per otto persone a una serata accogliente sul divano davanti allo Smart-TV – è qui che si trascorrono insieme le ore più belle.">Vom Esstisch für acht Personen bis zum gemütlichen Sofa-Abend vor dem Smart-TV – hier verbringt man die schönsten Stunden gemeinsam.</p>
     </div>
     <div class="split-img land"><div class="ph" style="background-image:url('images/07.jpg')"></div></div>
   </div>
@@ -319,10 +343,10 @@
 <section style="padding-top:0">
   <div class="wrap split reveal">
     <div class="split-text">
-      <div class="eyebrow" data-de="Schlafen & Erholen" data-en="Sleep & Relax">Schlafen & Erholen</div>
-      <h2 data-de="Aufwachen auf 1800 Metern" data-en="Waking up at 1,800 metres">Aufwachen auf 1800 Metern</h2>
-      <p data-de="Drei ruhige Schlafzimmer mit gemütlichen Betten und stilvollen Details im Alpenchic-Look sorgen für erholsame Nächte. Das Hauptschlafzimmer überzeugt mit eigenem En-Suite-Bad und direktem Zugang zur Terrasse – Morgenkaffee mit Bergblick inklusive." data-en="Three peaceful bedrooms with cosy beds and tasteful alpine-chic details ensure restful nights. The master bedroom impresses with its own en-suite bathroom and direct terrace access – morning coffee with a mountain view included.">Drei ruhige Schlafzimmer mit gemütlichen Betten und stilvollen Details im Alpenchic-Look sorgen für erholsame Nächte. Das Hauptschlafzimmer überzeugt mit eigenem En-Suite-Bad und direktem Zugang zur Terrasse – Morgenkaffee mit Bergblick inklusive.</p>
-      <p data-de="Zwei moderne Badezimmer bieten genug Komfort, auch wenn die Wohnung voll belegt ist." data-en="Two modern bathrooms provide plenty of comfort, even when the apartment is fully booked.">Zwei moderne Badezimmer bieten genug Komfort, auch wenn die Wohnung voll belegt ist.</p>
+      <div class="eyebrow" data-de="Schlafen & Erholen" data-en="Sleep & Relax" data-fr="Dormir & se ressourcer" data-it="Dormire & rigenerarsi">Schlafen & Erholen</div>
+      <h2 data-de="Aufwachen auf 1800 Metern" data-en="Waking up at 1,800 metres" data-fr="Se réveiller à 1800 mètres" data-it="Svegliarsi a 1800 metri">Aufwachen auf 1800 Metern</h2>
+      <p data-de="Drei ruhige Schlafzimmer mit gemütlichen Betten und stilvollen Details im Alpenchic-Look sorgen für erholsame Nächte. Das Hauptschlafzimmer überzeugt mit eigenem En-Suite-Bad und direktem Zugang zur Terrasse – Morgenkaffee mit Bergblick inklusive." data-en="Three peaceful bedrooms with cosy beds and tasteful alpine-chic details ensure restful nights. The master bedroom impresses with its own en-suite bathroom and direct terrace access – morning coffee with a mountain view included." data-fr="Trois chambres paisibles, dotées de lits douillets et de détails raffinés au look chic alpin, garantissent des nuits reposantes. La chambre principale séduit par sa salle de bain attenante et son accès direct à la terrasse – café du matin avec vue sur les montagnes inclus." data-it="Tre tranquille camere da letto, con letti accoglienti e raffinati dettagli in stile chic alpino, garantiscono notti riposanti. La camera principale conquista con il suo bagno en-suite e l'accesso diretto alla terrazza – caffè del mattino con vista sulle montagne incluso.">Drei ruhige Schlafzimmer mit gemütlichen Betten und stilvollen Details im Alpenchic-Look sorgen für erholsame Nächte. Das Hauptschlafzimmer überzeugt mit eigenem En-Suite-Bad und direktem Zugang zur Terrasse – Morgenkaffee mit Bergblick inklusive.</p>
+      <p data-de="Zwei moderne Badezimmer bieten genug Komfort, auch wenn die Wohnung voll belegt ist." data-en="Two modern bathrooms provide plenty of comfort, even when the apartment is fully booked." data-fr="Deux salles de bain modernes offrent un grand confort, même lorsque l'appartement est complet." data-it="Due bagni moderni offrono ampio comfort, anche quando l'appartamento è al completo.">Zwei moderne Badezimmer bieten genug Komfort, auch wenn die Wohnung voll belegt ist.</p>
     </div>
     <div class="split-img"><div class="ph" style="background-image:url('images/03.jpg')"></div></div>
   </div>
@@ -332,8 +356,8 @@
 <section id="galerie" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head center reveal">
-      <div class="eyebrow" data-de="Galerie" data-en="Gallery">Galerie</div>
-      <h2 data-de="Ein Blick in die Casa Bella" data-en="A look inside Casa Bella">Ein Blick in die Casa Bella</h2>
+      <div class="eyebrow" data-de="Galerie" data-en="Gallery" data-fr="Galerie" data-it="Galleria">Galerie</div>
+      <h2 data-de="Ein Blick in die Casa Bella" data-en="A look inside Casa Bella" data-fr="Un regard à l'intérieur de la Casa Bella" data-it="Uno sguardo all'interno della Casa Bella">Ein Blick in die Casa Bella</h2>
     </div>
     <div class="gallery reveal">
       <div class="gitem big" role="img" aria-label="Sonnenterrasse der Casa Bella mit Blick auf die Aroser Bergkirche und verschneite Gipfel" data-img="images/01.jpg"><div class="ph" style="background-image:url('images/01.jpg')"></div></div>
@@ -353,26 +377,26 @@
 <section class="amen-sec" id="arosa">
   <div class="wrap">
     <div class="sec-head center reveal">
-      <div class="eyebrow" data-de="Arosa erleben" data-en="Discover Arosa">Arosa erleben</div>
-      <h2 data-de="365 Tage Bergglück" data-en="365 days of mountain bliss">365 Tage Bergglück</h2>
-      <p data-de="Zentrum, Restaurants und Bergbahnen sind nur wenige Schritte entfernt – und das Skigebiet Arosa Lenzerheide liegt direkt vor der Tür." data-en="The centre, restaurants and mountain lifts are just steps away – and the Arosa Lenzerheide ski area is right on your doorstep.">Zentrum, Restaurants und Bergbahnen sind nur wenige Schritte entfernt – und das Skigebiet Arosa Lenzerheide liegt direkt vor der Tür.</p>
+      <div class="eyebrow" data-de="Arosa erleben" data-en="Discover Arosa" data-fr="Découvrir Arosa" data-it="Scoprire Arosa">Arosa erleben</div>
+      <h2 data-de="365 Tage Bergglück" data-en="365 days of mountain bliss" data-fr="365 jours de bonheur en montagne" data-it="365 giorni di felicità in montagna">365 Tage Bergglück</h2>
+      <p data-de="Zentrum, Restaurants und Bergbahnen sind nur wenige Schritte entfernt – und das Skigebiet Arosa Lenzerheide liegt direkt vor der Tür." data-en="The centre, restaurants and mountain lifts are just steps away – and the Arosa Lenzerheide ski area is right on your doorstep." data-fr="Le centre, les restaurants et les remontées mécaniques ne sont qu'à quelques pas – et le domaine skiable Arosa Lenzerheide se trouve juste devant la porte." data-it="Il centro, i ristoranti e gli impianti di risalita sono a pochi passi – e il comprensorio sciistico Arosa Lenzerheide si trova proprio davanti alla porta.">Zentrum, Restaurants und Bergbahnen sind nur wenige Schritte entfernt – und das Skigebiet Arosa Lenzerheide liegt direkt vor der Tür.</p>
     </div>
     <div class="season-tabs reveal">
-      <button class="active" data-season="winter" data-de="Winter" data-en="Winter">Winter</button>
-      <button data-season="sommer" data-de="Sommer" data-en="Summer">Sommer</button>
+      <button class="active" data-season="winter" data-de="Winter" data-en="Winter" data-fr="Hiver" data-it="Inverno">Winter</button>
+      <button data-season="sommer" data-de="Sommer" data-en="Summer" data-fr="Été" data-it="Estate">Sommer</button>
     </div>
     <div class="season-pane active" data-pane="winter">
       <div class="act-grid reveal">
-        <div class="act"><div class="ph" style="background-image:url('images/arosa/w_pisten.jpg')"></div><div class="act-cap"><h3 data-de="225 km Pisten" data-en="225 km of slopes">225 km Pisten</h3><p data-de="Skigebiet Arosa Lenzerheide" data-en="Arosa Lenzerheide ski area">Skigebiet Arosa Lenzerheide</p></div></div>
-        <div class="act"><div class="ph" style="background-image:url('images/arosa/w_panorama.jpg')"></div><div class="act-cap"><h3 data-de="Winterwandern" data-en="Winter hiking">Winterwandern</h3><p data-de="Verschneite Wege & Bergpanorama" data-en="Snowy trails & mountain panorama">Verschneite Wege & Bergpanorama</p></div></div>
-        <div class="act"><div class="ph" style="background-image:url('images/arosa/w_eis.jpg')"></div><div class="act-cap"><h3 data-de="Eislaufen am Obersee" data-en="Skating on the Obersee">Eislaufen am Obersee</h3><p data-de="Natureisfeld mitten im Dorf" data-en="Natural ice rink in the village">Natureisfeld mitten im Dorf</p></div></div>
+        <div class="act"><div class="ph" style="background-image:url('images/arosa/w_pisten.jpg')"></div><div class="act-cap"><h3 data-de="225 km Pisten" data-en="225 km of slopes" data-fr="225 km de pistes" data-it="225 km di piste">225 km Pisten</h3><p data-de="Skigebiet Arosa Lenzerheide" data-en="Arosa Lenzerheide ski area" data-fr="Domaine skiable Arosa Lenzerheide" data-it="Comprensorio sciistico Arosa Lenzerheide">Skigebiet Arosa Lenzerheide</p></div></div>
+        <div class="act"><div class="ph" style="background-image:url('images/arosa/w_panorama.jpg')"></div><div class="act-cap"><h3 data-de="Winterwandern" data-en="Winter hiking" data-fr="Randonnée hivernale" data-it="Escursioni invernali">Winterwandern</h3><p data-de="Verschneite Wege & Bergpanorama" data-en="Snowy trails & mountain panorama" data-fr="Sentiers enneigés & panorama montagnard" data-it="Sentieri innevati & panorama montano">Verschneite Wege & Bergpanorama</p></div></div>
+        <div class="act"><div class="ph" style="background-image:url('images/arosa/w_eis.jpg')"></div><div class="act-cap"><h3 data-de="Eislaufen am Obersee" data-en="Skating on the Obersee" data-fr="Patinage sur l'Obersee" data-it="Pattinaggio sull'Obersee">Eislaufen am Obersee</h3><p data-de="Natureisfeld mitten im Dorf" data-en="Natural ice rink in the village" data-fr="Patinoire naturelle au cœur du village" data-it="Pista di ghiaccio naturale nel cuore del villaggio">Natureisfeld mitten im Dorf</p></div></div>
       </div>
     </div>
     <div class="season-pane" data-pane="sommer">
       <div class="act-grid reveal">
-        <div class="act"><div class="ph" style="background-image:url('images/arosa/s_wandern.jpg')"></div><div class="act-cap"><h3 data-de="300 km Wanderwege" data-en="300 km of trails">300 km Wanderwege</h3><p data-de="Von gemütlich bis hochalpin" data-en="From easy to high-alpine">Von gemütlich bis hochalpin</p></div></div>
-        <div class="act"><div class="ph" style="background-image:url('images/arosa/s_seen.jpg')"></div><div class="act-cap"><h3 data-de="Glasklare Bergseen" data-en="Crystal-clear lakes">Glasklare Bergseen</h3><p data-de="Ober- & Untersee mitten in Arosa" data-en="Ober- & Untersee right in Arosa">Ober- & Untersee mitten in Arosa</p></div></div>
-        <div class="act"><div class="ph" style="background-image:url('images/arosa/s_dorf.jpg')"></div><div class="act-cap"><h3 data-de="Bergdorf Arosa" data-en="Arosa mountain village">Bergdorf Arosa</h3><p data-de="Zentrum, Restaurants & Bärenland" data-en="Centre, restaurants & bear sanctuary">Zentrum, Restaurants & Bärenland</p></div></div>
+        <div class="act"><div class="ph" style="background-image:url('images/arosa/s_wandern.jpg')"></div><div class="act-cap"><h3 data-de="300 km Wanderwege" data-en="300 km of trails" data-fr="300 km de sentiers" data-it="300 km di sentieri">300 km Wanderwege</h3><p data-de="Von gemütlich bis hochalpin" data-en="From easy to high-alpine" data-fr="De la balade tranquille à la haute montagne" data-it="Dalla passeggiata tranquilla all'alta montagna">Von gemütlich bis hochalpin</p></div></div>
+        <div class="act"><div class="ph" style="background-image:url('images/arosa/s_seen.jpg')"></div><div class="act-cap"><h3 data-de="Glasklare Bergseen" data-en="Crystal-clear lakes" data-fr="Lacs de montagne cristallins" data-it="Laghi di montagna cristallini">Glasklare Bergseen</h3><p data-de="Ober- & Untersee mitten in Arosa" data-en="Ober- & Untersee right in Arosa" data-fr="Obersee & Untersee au cœur d'Arosa" data-it="Obersee & Untersee nel cuore di Arosa">Ober- & Untersee mitten in Arosa</p></div></div>
+        <div class="act"><div class="ph" style="background-image:url('images/arosa/s_dorf.jpg')"></div><div class="act-cap"><h3 data-de="Bergdorf Arosa" data-en="Arosa mountain village" data-fr="Village de montagne d'Arosa" data-it="Villaggio di montagna di Arosa">Bergdorf Arosa</h3><p data-de="Zentrum, Restaurants & Bärenland" data-en="Centre, restaurants & bear sanctuary" data-fr="Centre, restaurants & parc aux ours d'Arosa" data-it="Centro, ristoranti & parco degli orsi di Arosa">Zentrum, Restaurants & Bärenland</p></div></div>
       </div>
     </div>
   </div>
@@ -382,14 +406,14 @@
 <section>
   <div class="wrap">
     <div class="sec-head center reveal">
-      <div class="eyebrow" data-de="Gut zu wissen" data-en="Good to know">Gut zu wissen</div>
-      <h2 data-de="Die wichtigsten Infos" data-en="The key details">Die wichtigsten Infos</h2>
+      <div class="eyebrow" data-de="Gut zu wissen" data-en="Good to know" data-fr="Bon à savoir" data-it="Buono a sapersi">Gut zu wissen</div>
+      <h2 data-de="Die wichtigsten Infos" data-en="The key details" data-fr="Les informations essentielles" data-it="Le informazioni essenziali">Die wichtigsten Infos</h2>
     </div>
     <div class="gtk-grid reveal">
-      <div class="gtk"><h4 data-de="An- & Abreise" data-en="Check-in & out">An- & Abreise</h4><p data-de="Check-in: Samstag ab 16:00" data-en="Check-in: Saturday from 4:00 pm">Check-in: Samstag ab 16:00</p><p data-de="Check-out: bis 10:00" data-en="Check-out: by 10:00 am">Check-out: bis 10:00</p><small data-de="Andere Zeiten auf Anfrage" data-en="Other times on request">Andere Zeiten auf Anfrage</small></div>
-      <div class="gtk"><h4 data-de="Belegung" data-en="Occupancy">Belegung</h4><p data-de="1 bis 8 Personen" data-en="1 to 8 guests">1 bis 8 Personen</p><p data-de="3 Schlafzimmer · 2 Bäder" data-en="3 bedrooms · 2 baths">3 Schlafzimmer · 2 Bäder</p><small data-de="Haustiere leider nicht erlaubt" data-en="Pets unfortunately not allowed">Haustiere leider nicht erlaubt</small></div>
-      <div class="gtk"><h4 data-de="Inklusive" data-en="Included">Inklusive</h4><p data-de="2 Garagenplätze & Skiraum" data-en="2 garage spaces & ski room">2 Garagenplätze & Skiraum</p><p data-de="WLAN & Smart-TV" data-en="Wi-Fi & smart TV">WLAN & Smart-TV</p><small data-de="Kostenfreier Ortsbus vor dem Haus" data-en="Free local bus at the door">Kostenfreier Ortsbus vor dem Haus</small></div>
-      <div class="gtk"><h4 data-de="Zusätzlich" data-en="Additional">Zusätzlich</h4><p data-de="Wäschepaket: CHF 30 p. P." data-en="Linen package: CHF 30 p.p.">Wäschepaket: CHF 30 p. P.</p><p data-de="Endreinigung: CHF 350" data-en="Final cleaning: CHF 350">Endreinigung: CHF 350</p><small data-de="Kurtaxe: CHF 6 p. P. / Nacht" data-en="Tourist tax: CHF 6 p.p. / night">Kurtaxe: CHF 6 p. P. / Nacht</small></div>
+      <div class="gtk"><h4 data-de="An- & Abreise" data-en="Check-in & out" data-fr="Arrivée & départ" data-it="Arrivo & partenza">An- & Abreise</h4><p data-de="Check-in: Samstag ab 16:00" data-en="Check-in: Saturday from 4:00 pm" data-fr="Arrivée : samedi dès 16h00" data-it="Arrivo: sabato dalle 16:00">Check-in: Samstag ab 16:00</p><p data-de="Check-out: bis 10:00" data-en="Check-out: by 10:00 am" data-fr="Départ : jusqu'à 10h00" data-it="Partenza: entro le 10:00">Check-out: bis 10:00</p><small data-de="Andere Zeiten auf Anfrage" data-en="Other times on request" data-fr="Autres horaires sur demande" data-it="Altri orari su richiesta">Andere Zeiten auf Anfrage</small></div>
+      <div class="gtk"><h4 data-de="Belegung" data-en="Occupancy" data-fr="Occupation" data-it="Occupazione">Belegung</h4><p data-de="1 bis 8 Personen" data-en="1 to 8 guests" data-fr="1 à 8 personnes" data-it="Da 1 a 8 persone">1 bis 8 Personen</p><p data-de="3 Schlafzimmer · 2 Bäder" data-en="3 bedrooms · 2 baths" data-fr="3 chambres · 2 salles de bain" data-it="3 camere da letto · 2 bagni">3 Schlafzimmer · 2 Bäder</p><small data-de="Haustiere leider nicht erlaubt" data-en="Pets unfortunately not allowed" data-fr="Animaux malheureusement non admis" data-it="Animali purtroppo non ammessi">Haustiere leider nicht erlaubt</small></div>
+      <div class="gtk"><h4 data-de="Inklusive" data-en="Included" data-fr="Inclus" data-it="Incluso">Inklusive</h4><p data-de="2 Garagenplätze & Skiraum" data-en="2 garage spaces & ski room" data-fr="2 places de garage & local à skis" data-it="2 posti garage & deposito sci">2 Garagenplätze & Skiraum</p><p data-de="WLAN & Smart-TV" data-en="Wi-Fi & smart TV" data-fr="Wi-Fi & Smart-TV" data-it="Wi-Fi & Smart-TV">WLAN & Smart-TV</p><small data-de="Kostenfreier Ortsbus vor dem Haus" data-en="Free local bus at the door" data-fr="Bus local gratuit devant la maison" data-it="Bus locale gratuito davanti alla casa">Kostenfreier Ortsbus vor dem Haus</small></div>
+      <div class="gtk"><h4 data-de="Zusätzlich" data-en="Additional" data-fr="En supplément" data-it="In aggiunta">Zusätzlich</h4><p data-de="Wäschepaket: CHF 30 p. P." data-en="Linen package: CHF 30 p.p." data-fr="Forfait linge : CHF 30 / pers." data-it="Pacchetto biancheria: CHF 30 a pers.">Wäschepaket: CHF 30 p. P.</p><p data-de="Endreinigung: CHF 350" data-en="Final cleaning: CHF 350" data-fr="Nettoyage final : CHF 350" data-it="Pulizia finale: CHF 350">Endreinigung: CHF 350</p><small data-de="Kurtaxe: CHF 6 p. P. / Nacht" data-en="Tourist tax: CHF 6 p.p. / night" data-fr="Taxe de séjour : CHF 6 / pers. / nuit" data-it="Tassa di soggiorno: CHF 6 a pers. / notte">Kurtaxe: CHF 6 p. P. / Nacht</small></div>
     </div>
   </div>
 </section>
@@ -398,17 +422,17 @@
 <section id="lage">
   <div class="wrap">
     <div class="sec-head center reveal">
-      <div class="eyebrow" data-de="Lage & Umgebung" data-en="Location & Surroundings">Lage & Umgebung</div>
-      <h2 data-de="Mitten in Arosa – alles vor der Tür" data-en="In the heart of Arosa – everything on your doorstep">Mitten in Arosa – alles vor der Tür</h2>
-      <p data-de="Die Casa Bella liegt zentral im Bergdorf Arosa auf 1800 m ü. M., im 3. Obergeschoss der „Casa Valbella“ – ruhig gelegen und doch nur wenige Schritte vom Geschehen entfernt." data-en="Casa Bella sits centrally in the mountain village of Arosa at 1,800 m above sea level, on the third floor of “Casa Valbella” – peaceful, yet just steps from the action.">Die Casa Bella liegt zentral im Bergdorf Arosa auf 1800 m ü. M., im 3. Obergeschoss der „Casa Valbella“ – ruhig gelegen und doch nur wenige Schritte vom Geschehen entfernt.</p>
+      <div class="eyebrow" data-de="Lage & Umgebung" data-en="Location & Surroundings" data-fr="Situation & environs" data-it="Posizione & dintorni">Lage & Umgebung</div>
+      <h2 data-de="Mitten in Arosa – alles vor der Tür" data-en="In the heart of Arosa – everything on your doorstep" data-fr="Au cœur d'Arosa – tout à portée de main" data-it="Nel cuore di Arosa – tutto a portata di mano">Mitten in Arosa – alles vor der Tür</h2>
+      <p data-de="Die Casa Bella liegt zentral im Bergdorf Arosa auf 1800 m ü. M., im 3. Obergeschoss der „Casa Valbella“ – ruhig gelegen und doch nur wenige Schritte vom Geschehen entfernt." data-en="Casa Bella sits centrally in the mountain village of Arosa at 1,800 m above sea level, on the third floor of “Casa Valbella” – peaceful, yet just steps from the action." data-fr="La Casa Bella se situe au centre du village de montagne d'Arosa, à 1800 m d'altitude, au 3e étage de la « Casa Valbella » – au calme, et pourtant à quelques pas de l'animation." data-it="La Casa Bella si trova al centro del villaggio di montagna di Arosa, a 1800 m s.l.m., al 3° piano della « Casa Valbella » – in posizione tranquilla, eppure a pochi passi dal centro dell'azione.">Die Casa Bella liegt zentral im Bergdorf Arosa auf 1800 m ü. M., im 3. Obergeschoss der „Casa Valbella“ – ruhig gelegen und doch nur wenige Schritte vom Geschehen entfernt.</p>
     </div>
     <div class="gtk-grid reveal">
-      <div class="gtk"><h4 data-de="Skigebiet" data-en="Ski area">Skigebiet</h4><p data-de="Arosa Lenzerheide" data-en="Arosa Lenzerheide">Arosa Lenzerheide</p><small data-de="225 km Pisten – Bergbahnen in wenigen Minuten" data-en="225 km of slopes – lifts within minutes">225 km Pisten – Bergbahnen in wenigen Minuten</small></div>
-      <div class="gtk"><h4 data-de="Dorfzentrum" data-en="Village centre">Dorfzentrum</h4><p data-de="Fussläufig" data-en="Walking distance">Fussläufig</p><small data-de="Restaurants, Bars & Geschäfte gleich um die Ecke" data-en="Restaurants, bars & shops just around the corner">Restaurants, Bars & Geschäfte gleich um die Ecke</small></div>
-      <div class="gtk"><h4 data-de="Ortsbus" data-en="Local bus">Ortsbus</h4><p data-de="Direkt vor dem Haus" data-en="Right outside">Direkt vor dem Haus</p><small data-de="Kostenlos durch ganz Arosa" data-en="Free throughout Arosa">Kostenlos durch ganz Arosa</small></div>
-      <div class="gtk"><h4 data-de="Bergseen" data-en="Mountain lakes">Bergseen</h4><p data-de="Ober- & Untersee" data-en="Ober- & Untersee">Ober- & Untersee</p><small data-de="Wenige Gehminuten – Baden, Pedalo, Eislaufen" data-en="A few minutes' walk – swimming, pedalos, skating">Wenige Gehminuten – Baden, Pedalo, Eislaufen</small></div>
-      <div class="gtk"><h4 data-de="Bahnhof Arosa" data-en="Arosa station">Bahnhof Arosa</h4><p data-de="RhB-Bergbahnlinie" data-en="RhB mountain railway">RhB-Bergbahnlinie</p><small data-de="Bequem von Chur ins autoarme Bergdorf" data-en="Easily from Chur into the low-traffic village">Bequem von Chur ins autoarme Bergdorf</small></div>
-      <div class="gtk"><h4 data-de="Ausflugsziele" data-en="Attractions">Ausflugsziele</h4><p data-de="Arosa Bärenland" data-en="Arosa Bear Sanctuary">Arosa Bärenland</p><small data-de="Beliebtes Ziel für Familien ganz in der Nähe" data-en="Popular family destination close by">Beliebtes Ziel für Familien ganz in der Nähe</small></div>
+      <div class="gtk"><h4 data-de="Skigebiet" data-en="Ski area" data-fr="Domaine skiable" data-it="Comprensorio sciistico">Skigebiet</h4><p data-de="Arosa Lenzerheide" data-en="Arosa Lenzerheide" data-fr="Arosa Lenzerheide" data-it="Arosa Lenzerheide">Arosa Lenzerheide</p><small data-de="225 km Pisten – Bergbahnen in wenigen Minuten" data-en="225 km of slopes – lifts within minutes" data-fr="225 km de pistes – remontées mécaniques en quelques minutes" data-it="225 km di piste – impianti di risalita in pochi minuti">225 km Pisten – Bergbahnen in wenigen Minuten</small></div>
+      <div class="gtk"><h4 data-de="Dorfzentrum" data-en="Village centre" data-fr="Centre du village" data-it="Centro del villaggio">Dorfzentrum</h4><p data-de="Fussläufig" data-en="Walking distance" data-fr="À distance de marche" data-it="A pochi passi">Fussläufig</p><small data-de="Restaurants, Bars & Geschäfte gleich um die Ecke" data-en="Restaurants, bars & shops just around the corner" data-fr="Restaurants, bars & commerces juste au coin de la rue" data-it="Ristoranti, bar & negozi proprio dietro l'angolo">Restaurants, Bars & Geschäfte gleich um die Ecke</small></div>
+      <div class="gtk"><h4 data-de="Ortsbus" data-en="Local bus" data-fr="Bus local" data-it="Bus locale">Ortsbus</h4><p data-de="Direkt vor dem Haus" data-en="Right outside" data-fr="Juste devant la maison" data-it="Proprio davanti alla casa">Direkt vor dem Haus</p><small data-de="Kostenlos durch ganz Arosa" data-en="Free throughout Arosa" data-fr="Gratuit dans tout Arosa" data-it="Gratuito in tutta Arosa">Kostenlos durch ganz Arosa</small></div>
+      <div class="gtk"><h4 data-de="Bergseen" data-en="Mountain lakes" data-fr="Lacs de montagne" data-it="Laghi di montagna">Bergseen</h4><p data-de="Ober- & Untersee" data-en="Ober- & Untersee" data-fr="Obersee & Untersee" data-it="Obersee & Untersee">Ober- & Untersee</p><small data-de="Wenige Gehminuten – Baden, Pedalo, Eislaufen" data-en="A few minutes' walk – swimming, pedalos, skating" data-fr="À quelques minutes à pied – baignade, pédalo, patinage" data-it="A pochi minuti a piedi – nuoto, pedalò, pattinaggio">Wenige Gehminuten – Baden, Pedalo, Eislaufen</small></div>
+      <div class="gtk"><h4 data-de="Bahnhof Arosa" data-en="Arosa station" data-fr="Gare d'Arosa" data-it="Stazione di Arosa">Bahnhof Arosa</h4><p data-de="RhB-Bergbahnlinie" data-en="RhB mountain railway" data-fr="Ligne de montagne RhB" data-it="Linea ferroviaria di montagna RhB">RhB-Bergbahnlinie</p><small data-de="Bequem von Chur ins autoarme Bergdorf" data-en="Easily from Chur into the low-traffic village" data-fr="Facilement depuis Coire jusqu'au village de montagne à faible trafic" data-it="Comodamente da Coira fino al villaggio di montagna a basso traffico">Bequem von Chur ins autoarme Bergdorf</small></div>
+      <div class="gtk"><h4 data-de="Ausflugsziele" data-en="Attractions" data-fr="Excursions" data-it="Mete di gita">Ausflugsziele</h4><p data-de="Arosa Bärenland" data-en="Arosa Bear Sanctuary" data-fr="Parc aux ours d'Arosa" data-it="Parco degli orsi di Arosa">Arosa Bärenland</p><small data-de="Beliebtes Ziel für Familien ganz in der Nähe" data-en="Popular family destination close by" data-fr="Destination prisée des familles tout près" data-it="Meta amata dalle famiglie nelle immediate vicinanze">Beliebtes Ziel für Familien ganz in der Nähe</small></div>
     </div>
   </div>
 </section>
@@ -417,33 +441,33 @@
 <section class="amen-sec" id="faq">
   <div class="wrap">
     <div class="sec-head center reveal">
-      <div class="eyebrow" data-de="Häufige Fragen" data-en="FAQ">Häufige Fragen</div>
-      <h2 data-de="Gut zu wissen vor der Buchung" data-en="Good to know before booking">Gut zu wissen vor der Buchung</h2>
+      <div class="eyebrow" data-de="Häufige Fragen" data-en="FAQ" data-fr="Questions fréquentes" data-it="Domande frequenti">Häufige Fragen</div>
+      <h2 data-de="Gut zu wissen vor der Buchung" data-en="Good to know before booking" data-fr="Bon à savoir avant de réserver" data-it="Buono a sapersi prima di prenotare">Gut zu wissen vor der Buchung</h2>
     </div>
     <div class="faq-list reveal">
       <details open>
-        <summary data-de="Für wie viele Personen ist die Casa Bella geeignet?" data-en="How many guests can Casa Bella accommodate?">Für wie viele Personen ist die Casa Bella geeignet?</summary>
-        <div class="faq-a" data-de="Die Wohnung bietet auf 142 m² Platz für 1 bis 8 Personen – mit 3 Schlafzimmern und 2 Badezimmern. Ideal für Familien oder zwei Paare, die gemeinsam Ferien in Arosa machen." data-en="The 142 m² apartment sleeps 1 to 8 guests across 3 bedrooms and 2 bathrooms. Ideal for families or two couples holidaying together in Arosa.">Die Wohnung bietet auf 142 m² Platz für 1 bis 8 Personen – mit 3 Schlafzimmern und 2 Badezimmern. Ideal für Familien oder zwei Paare, die gemeinsam Ferien in Arosa machen.</div>
+        <summary data-de="Für wie viele Personen ist die Casa Bella geeignet?" data-en="How many guests can Casa Bella accommodate?" data-fr="Pour combien de personnes la Casa Bella convient-elle ?" data-it="Per quante persone è adatta la Casa Bella?">Für wie viele Personen ist die Casa Bella geeignet?</summary>
+        <div class="faq-a" data-de="Die Wohnung bietet auf 142 m² Platz für 1 bis 8 Personen – mit 3 Schlafzimmern und 2 Badezimmern. Ideal für Familien oder zwei Paare, die gemeinsam Ferien in Arosa machen." data-en="The 142 m² apartment sleeps 1 to 8 guests across 3 bedrooms and 2 bathrooms. Ideal for families or two couples holidaying together in Arosa." data-fr="Sur 142 m², l'appartement accueille de 1 à 8 personnes – avec 3 chambres et 2 salles de bain. Idéal pour les familles ou deux couples passant ensemble leurs vacances à Arosa." data-it="Su 142 m², l'appartamento ospita da 1 a 8 persone – con 3 camere da letto e 2 bagni. Ideale per famiglie o due coppie in vacanza insieme ad Arosa.">Die Wohnung bietet auf 142 m² Platz für 1 bis 8 Personen – mit 3 Schlafzimmern und 2 Badezimmern. Ideal für Familien oder zwei Paare, die gemeinsam Ferien in Arosa machen.</div>
       </details>
       <details>
-        <summary data-de="Gibt es Parkplätze an der Ferienwohnung?" data-en="Is there parking at the apartment?">Gibt es Parkplätze an der Ferienwohnung?</summary>
-        <div class="faq-a" data-de="Ja. Zur Casa Bella gehören 2 wettergeschützte Garagenplätze direkt zur Wohnung sowie ein gemeinschaftlicher Skiraum für die Ausrüstung." data-en="Yes. Casa Bella includes 2 weather-protected garage spaces right by the apartment plus a shared ski room for your gear.">Ja. Zur Casa Bella gehören 2 wettergeschützte Garagenplätze direkt zur Wohnung sowie ein gemeinschaftlicher Skiraum für die Ausrüstung.</div>
+        <summary data-de="Gibt es Parkplätze an der Ferienwohnung?" data-en="Is there parking at the apartment?" data-fr="Y a-t-il des places de parking à l'appartement de vacances ?" data-it="Ci sono posti auto presso l'appartamento di vacanza?">Gibt es Parkplätze an der Ferienwohnung?</summary>
+        <div class="faq-a" data-de="Ja. Zur Casa Bella gehören 2 wettergeschützte Garagenplätze direkt zur Wohnung sowie ein gemeinschaftlicher Skiraum für die Ausrüstung." data-en="Yes. Casa Bella includes 2 weather-protected garage spaces right by the apartment plus a shared ski room for your gear." data-fr="Oui. La Casa Bella dispose de 2 places de garage à l'abri des intempéries juste à côté de l'appartement, ainsi que d'un local à skis commun pour l'équipement." data-it="Sì. La Casa Bella dispone di 2 posti garage al riparo dalle intemperie proprio accanto all'appartamento, oltre a un deposito sci comune per l'attrezzatura.">Ja. Zur Casa Bella gehören 2 wettergeschützte Garagenplätze direkt zur Wohnung sowie ein gemeinschaftlicher Skiraum für die Ausrüstung.</div>
       </details>
       <details>
-        <summary data-de="Sind Haustiere erlaubt?" data-en="Are pets allowed?">Sind Haustiere erlaubt?</summary>
-        <div class="faq-a" data-de="Haustiere sind in der Casa Bella leider nicht gestattet." data-en="Pets are unfortunately not permitted at Casa Bella.">Haustiere sind in der Casa Bella leider nicht gestattet.</div>
+        <summary data-de="Sind Haustiere erlaubt?" data-en="Are pets allowed?" data-fr="Les animaux sont-ils admis ?" data-it="Sono ammessi animali domestici?">Sind Haustiere erlaubt?</summary>
+        <div class="faq-a" data-de="Haustiere sind in der Casa Bella leider nicht gestattet." data-en="Pets are unfortunately not permitted at Casa Bella." data-fr="Les animaux ne sont malheureusement pas admis à la Casa Bella." data-it="Gli animali domestici purtroppo non sono ammessi alla Casa Bella.">Haustiere sind in der Casa Bella leider nicht gestattet.</div>
       </details>
       <details>
-        <summary data-de="Wie zentral liegt die Wohnung in Arosa?" data-en="How central is the apartment in Arosa?">Wie zentral liegt die Wohnung in Arosa?</summary>
-        <div class="faq-a" data-de="Sehr zentral: Restaurants, Bars und Geschäfte sind fussläufig erreichbar und der kostenlose Ortsbus hält direkt vor dem Haus. Das Skigebiet Arosa Lenzerheide mit 225 km Pisten ist schnell erreicht." data-en="Very central: restaurants, bars and shops are within walking distance and the free local bus stops right outside. The Arosa Lenzerheide ski area with 225 km of slopes is quickly reached.">Sehr zentral: Restaurants, Bars und Geschäfte sind fussläufig erreichbar und der kostenlose Ortsbus hält direkt vor dem Haus. Das Skigebiet Arosa Lenzerheide mit 225 km Pisten ist schnell erreicht.</div>
+        <summary data-de="Wie zentral liegt die Wohnung in Arosa?" data-en="How central is the apartment in Arosa?" data-fr="L'appartement est-il situé au centre d'Arosa ?" data-it="Quanto è centrale l'appartamento ad Arosa?">Wie zentral liegt die Wohnung in Arosa?</summary>
+        <div class="faq-a" data-de="Sehr zentral: Restaurants, Bars und Geschäfte sind fussläufig erreichbar und der kostenlose Ortsbus hält direkt vor dem Haus. Das Skigebiet Arosa Lenzerheide mit 225 km Pisten ist schnell erreicht." data-en="Very central: restaurants, bars and shops are within walking distance and the free local bus stops right outside. The Arosa Lenzerheide ski area with 225 km of slopes is quickly reached." data-fr="Très central : restaurants, bars et commerces sont accessibles à pied et le bus local gratuit s'arrête juste devant la maison. Le domaine skiable Arosa Lenzerheide et ses 225 km de pistes se rejoint en un rien de temps." data-it="Molto centrale: ristoranti, bar e negozi sono raggiungibili a piedi e il bus locale gratuito ferma proprio davanti alla casa. Il comprensorio sciistico Arosa Lenzerheide con 225 km di piste si raggiunge in un attimo.">Sehr zentral: Restaurants, Bars und Geschäfte sind fussläufig erreichbar und der kostenlose Ortsbus hält direkt vor dem Haus. Das Skigebiet Arosa Lenzerheide mit 225 km Pisten ist schnell erreicht.</div>
       </details>
       <details>
-        <summary data-de="Wann sind Check-in und Check-out?" data-en="What are the check-in and check-out times?">Wann sind Check-in und Check-out?</summary>
-        <div class="faq-a" data-de="Check-in ist samstags ab 16:00 Uhr, Check-out bis 10:00 Uhr. Andere An- und Abreisezeiten sind auf Anfrage möglich." data-en="Check-in is Saturdays from 4:00 pm, check-out by 10:00 am. Other arrival and departure times are possible on request.">Check-in ist samstags ab 16:00 Uhr, Check-out bis 10:00 Uhr. Andere An- und Abreisezeiten sind auf Anfrage möglich.</div>
+        <summary data-de="Wann sind Check-in und Check-out?" data-en="What are the check-in and check-out times?" data-fr="Quels sont les horaires d'arrivée et de départ ?" data-it="Quali sono gli orari di arrivo e partenza?">Wann sind Check-in und Check-out?</summary>
+        <div class="faq-a" data-de="Check-in ist samstags ab 16:00 Uhr, Check-out bis 10:00 Uhr. Andere An- und Abreisezeiten sind auf Anfrage möglich." data-en="Check-in is Saturdays from 4:00 pm, check-out by 10:00 am. Other arrival and departure times are possible on request." data-fr="L'arrivée se fait le samedi à partir de 16h00, le départ jusqu'à 10h00. D'autres horaires d'arrivée et de départ sont possibles sur demande." data-it="L'arrivo è il sabato dalle 16:00, la partenza entro le 10:00. Altri orari di arrivo e partenza sono possibili su richiesta.">Check-in ist samstags ab 16:00 Uhr, Check-out bis 10:00 Uhr. Andere An- und Abreisezeiten sind auf Anfrage möglich.</div>
       </details>
       <details>
-        <summary data-de="Wie kann ich die Casa Bella buchen?" data-en="How do I book Casa Bella?">Wie kann ich die Casa Bella buchen?</summary>
-        <div class="faq-a" data-de="Bequem online über die Website von Bergluft Arosa (Button «Verfügbarkeit & Buchung»). Die persönliche Betreuung vor Ort übernimmt ebenfalls Bergluft Arosa." data-en="Conveniently online via the Bergluft Arosa website (button “Availability & Booking”). On-site hosting is also provided by Bergluft Arosa.">Bequem online über die Website von Bergluft Arosa (Button «Verfügbarkeit & Buchung»). Die persönliche Betreuung vor Ort übernimmt ebenfalls Bergluft Arosa.</div>
+        <summary data-de="Wie kann ich die Casa Bella buchen?" data-en="How do I book Casa Bella?" data-fr="Comment puis-je réserver la Casa Bella ?" data-it="Come posso prenotare la Casa Bella?">Wie kann ich die Casa Bella buchen?</summary>
+        <div class="faq-a" data-de="Bequem online über die Website von Bergluft Arosa (Button «Verfügbarkeit & Buchung»). Die persönliche Betreuung vor Ort übernimmt ebenfalls Bergluft Arosa." data-en="Conveniently online via the Bergluft Arosa website (button “Availability & Booking”). On-site hosting is also provided by Bergluft Arosa." data-fr="Confortablement en ligne via le site de Bergluft Arosa (bouton « Disponibilité & réservation »). L'accueil personnalisé sur place est également assuré par Bergluft Arosa." data-it="Comodamente online tramite il sito di Bergluft Arosa (pulsante « Disponibilità & prenotazione »). Anche l'assistenza personale in loco è curata da Bergluft Arosa.">Bequem online über die Website von Bergluft Arosa (Button «Verfügbarkeit & Buchung»). Die persönliche Betreuung vor Ort übernimmt ebenfalls Bergluft Arosa.</div>
       </details>
     </div>
   </div>
@@ -453,14 +477,14 @@
 <section class="cta" id="buchen">
   <div class="cta-bg" style="background-image:url('images/04.jpg')"></div>
   <div class="wrap reveal">
-    <div class="eyebrow" data-de="Verfügbarkeit & Buchung" data-en="Availability & Booking">Verfügbarkeit & Buchung</div>
-    <h2 data-de="Bereit für Ihre Auszeit?" data-en="Ready for your getaway?">Bereit für Ihre Auszeit?</h2>
-    <p data-de="Prüfen Sie freie Daten und Preise direkt bei Bergluft Arosa und buchen Sie sicher in wenigen Klicks." data-en="Check available dates and prices directly with Bergluft Arosa and book securely in just a few clicks.">Prüfen Sie freie Daten und Preise direkt bei Bergluft Arosa und buchen Sie sicher in wenigen Klicks.</p>
+    <div class="eyebrow" data-de="Verfügbarkeit & Buchung" data-en="Availability & Booking" data-fr="Disponibilité & réservation" data-it="Disponibilità & prenotazione">Verfügbarkeit & Buchung</div>
+    <h2 data-de="Bereit für Ihre Auszeit?" data-en="Ready for your getaway?" data-fr="Prêt pour votre escapade ?" data-it="Pronti per la vostra pausa?">Bereit für Ihre Auszeit?</h2>
+    <p data-de="Prüfen Sie freie Daten und Preise direkt bei Bergluft Arosa und buchen Sie sicher in wenigen Klicks." data-en="Check available dates and prices directly with Bergluft Arosa and book securely in just a few clicks." data-fr="Vérifiez les dates disponibles et les tarifs directement auprès de Bergluft Arosa et réservez en toute sécurité en quelques clics." data-it="Verificate le date disponibili e i prezzi direttamente presso Bergluft Arosa e prenotate in tutta sicurezza in pochi clic.">Prüfen Sie freie Daten und Preise direkt bei Bergluft Arosa und buchen Sie sicher in wenigen Klicks.</p>
     <div class="btn-row">
-      <a href="#" id="book-link" target="_blank" rel="noopener" class="btn btn-primary" data-de="Jetzt Verfügbarkeit prüfen" data-en="Check availability now">Jetzt Verfügbarkeit prüfen</a>
-      <a href="mailto:info@bergluft-arosa.ch?subject=Anfrage%20Casa%20Bella" class="btn btn-ghost" data-de="Anfrage per E-Mail" data-en="Enquire by email">Anfrage per E-Mail</a>
+      <a href="#" id="book-link" target="_blank" rel="noopener" class="btn btn-primary" data-de="Jetzt Verfügbarkeit prüfen" data-en="Check availability now" data-fr="Vérifier la disponibilité" data-it="Verifica la disponibilità">Jetzt Verfügbarkeit prüfen</a>
+      <a href="mailto:info@bergluft-arosa.ch?subject=Anfrage%20Casa%20Bella" class="btn btn-ghost" data-de="Anfrage per E-Mail" data-en="Enquire by email" data-fr="Demande par e-mail" data-it="Richiesta via e-mail">Anfrage per E-Mail</a>
     </div>
-    <p class="platform-note" data-de="Direkte Buchung & persönliche Betreuung durch Bergluft Arosa" data-en="Direct booking & personal hosting by Bergluft Arosa">Direkte Buchung & persönliche Betreuung durch Bergluft Arosa</p>
+    <p class="platform-note" data-de="Direkte Buchung & persönliche Betreuung durch Bergluft Arosa" data-en="Direct booking & personal hosting by Bergluft Arosa" data-fr="Réservation directe & accueil personnalisé par Bergluft Arosa" data-it="Prenotazione diretta & assistenza personale di Bergluft Arosa">Direkte Buchung & persönliche Betreuung durch Bergluft Arosa</p>
   </div>
 </section>
 
@@ -470,17 +494,17 @@
     <div class="foot-grid">
       <div class="foot-col">
         <div class="brand" style="font-size:1.7rem;margin-bottom:10px">Casa <span style="color:var(--wood-light)">Bella</span></div>
-        <p data-de="Alpenchic-Ferienwohnung in der Casa Valbella, 7050 Arosa." data-en="Alpine-chic holiday apartment in Casa Valbella, 7050 Arosa.">Alpenchic-Ferienwohnung in der Casa Valbella, 7050 Arosa.</p>
+        <p data-de="Alpenchic-Ferienwohnung in der Casa Valbella, 7050 Arosa." data-en="Alpine-chic holiday apartment in Casa Valbella, 7050 Arosa." data-fr="Appartement de vacances chic alpin dans la Casa Valbella, 7050 Arosa." data-it="Appartamento di vacanza chic alpino nella Casa Valbella, 7050 Arosa.">Alpenchic-Ferienwohnung in der Casa Valbella, 7050 Arosa.</p>
       </div>
       <div class="foot-col">
-        <h4 data-de="Entdecken" data-en="Explore">Entdecken</h4>
-        <a href="#wohnung" data-de="Die Wohnung" data-en="The Apartment">Die Wohnung</a>
-        <a href="#ausstattung" data-de="Ausstattung" data-en="Amenities">Ausstattung</a>
-        <a href="#galerie" data-de="Galerie" data-en="Gallery">Galerie</a>
-        <a href="#arosa" data-de="Arosa erleben" data-en="Discover Arosa">Arosa erleben</a>
+        <h4 data-de="Entdecken" data-en="Explore" data-fr="Découvrir" data-it="Scoprire">Entdecken</h4>
+        <a href="#wohnung" data-de="Die Wohnung" data-en="The Apartment" data-fr="L'appartement" data-it="L'appartamento">Die Wohnung</a>
+        <a href="#ausstattung" data-de="Ausstattung" data-en="Amenities" data-fr="Équipements" data-it="Dotazioni">Ausstattung</a>
+        <a href="#galerie" data-de="Galerie" data-en="Gallery" data-fr="Galerie" data-it="Galleria">Galerie</a>
+        <a href="#arosa" data-de="Arosa erleben" data-en="Discover Arosa" data-fr="Découvrir Arosa" data-it="Scoprire Arosa">Arosa erleben</a>
       </div>
       <div class="foot-col">
-        <h4 data-de="Vermietung & Kontakt" data-en="Rental & Contact">Vermietung & Kontakt</h4>
+        <h4 data-de="Vermietung & Kontakt" data-en="Rental & Contact" data-fr="Location & contact" data-it="Affitto & contatto">Vermietung & Kontakt</h4>
         <p>Bergluft Arosa · Katja & Volker</p>
         <a href="mailto:info@bergluft-arosa.ch">info@bergluft-arosa.ch</a>
         <p>7050 Arosa, Graubünden 🇨🇭</p>
@@ -489,10 +513,10 @@
     <div class="foot-bottom">
       <span>© <span id="year"></span> Casa Bella · Arosa</span>
       <span style="display:flex;gap:20px;flex-wrap:wrap">
-        <a href="impressum.html" style="text-decoration:underline" data-de="Impressum" data-en="Imprint">Impressum</a>
-        <a href="datenschutz.html" style="text-decoration:underline" data-de="Datenschutz" data-en="Privacy">Datenschutz</a>
+        <a href="impressum.html" style="text-decoration:underline" data-de="Impressum" data-en="Imprint" data-fr="Mentions légales" data-it="Note legali">Impressum</a>
+        <a href="datenschutz.html" style="text-decoration:underline" data-de="Datenschutz" data-en="Privacy" data-fr="Confidentialité" data-it="Privacy">Datenschutz</a>
       </span>
-      <span data-de="Mit ♥ in den Bergen" data-en="Made with ♥ in the mountains">Mit ♥ in den Bergen</span>
+      <span data-de="Mit ♥ in den Bergen" data-en="Made with ♥ in the mountains" data-fr="Avec ♥ dans les montagnes" data-it="Con ♥ tra le montagne">Mit ♥ in den Bergen</span>
     </div>
   </div>
 </footer>
@@ -595,8 +619,15 @@
       "tourBookingPage": "https://bergluft-arosa.ch/ferienwohnung/casa-bella/#buchen",
       "checkinTime": "16:00",
       "checkoutTime": "10:00",
-      "availableLanguage": ["de", "en"],
+      "availableLanguage": ["de", "en", "fr", "it"],
       "currenciesAccepted": "CHF",
+      "subjectOf": {
+        "@type": "Article",
+        "headline": "Luxury Mountain Apartments in Switzerland",
+        "url": "https://www.nytimes.com/2024/11/08/realestate/luxury-mountain-apartments-in-switzerland.html",
+        "datePublished": "2024-11-08",
+        "publisher": { "@type": "NewsMediaOrganization", "name": "The New York Times" }
+      },
       "hasMap": "https://www.google.com/maps/search/?api=1&query=46.7833,9.6796",
       "sameAs": [
         "https://bergluft-arosa.ch/ferienwohnung/casa-bella/",
@@ -636,7 +667,7 @@
       "@id": "https://www.casabellaarosa.ch/#website",
       "url": "https://www.casabellaarosa.ch/",
       "name": "Casa Bella Arosa",
-      "inLanguage": ["de", "en"],
+      "inLanguage": ["de", "en", "fr", "it"],
       "publisher": { "@id": "https://www.casabellaarosa.ch/#bergluft" }
     },
     {

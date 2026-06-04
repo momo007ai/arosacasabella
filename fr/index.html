@@ -7,9 +7,9 @@
 <script>
   window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
   gtag('js',new Date());
-  gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
+  gtag('consent','default',{ad_storage:'denied',analytics_storage:'granted',ad_user_data:'denied',ad_personalization:'denied'});
   gtag('config','G-1L93ZN9SJK',{anonymize_ip:true});
-  try{if(localStorage.getItem('cc-consent')==='granted')gtag('consent','update',{analytics_storage:'granted'});}catch(e){}
+  try{if(localStorage.getItem('cc-consent')==='denied')gtag('consent','update',{analytics_storage:'denied'});}catch(e){}
 </script>
 <title>Casa Bella Arosa · Appartement de vacances de luxe à louer | 142 m², 8 pers., terrasse</title>
 <meta name="description" content="Casa Bella – appartement de vacances chic alpin exclusif à Arosa. 142 m², terrasse ensoleillée de 73 m² avec vue sur les montagnes, 3 chambres pour 8 personnes, 2 places de garage, central et calme. Vacances dans le domaine skiable d'Arosa Lenzerheide – été comme hiver.">
@@ -645,7 +645,7 @@
 
 <!-- COOKIE-BANNER -->
 <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie-Hinweis">
-  <p data-de="Wir nutzen Google Analytics, um die Nutzung der Seite anonym zu verstehen. Erlaubst du Statistik-Cookies?" data-en="We use Google Analytics to understand site usage anonymously. Do you allow statistics cookies?" data-fr="Nous utilisons Google Analytics pour comprendre l'usage du site de manière anonyme. Autorisez-vous les cookies statistiques ?" data-it="Utilizziamo Google Analytics per capire l'uso del sito in modo anonimo. Consenti i cookie statistici?">Nous utilisons Google Analytics pour comprendre l'usage du site de manière anonyme. Autorisez-vous les cookies statistiques ?</p>
+  <p data-de="Wir verwenden anonyme Statistik (Google Analytics), um die Seite zu verbessern. Du kannst jederzeit widersprechen." data-en="We use anonymous statistics (Google Analytics) to improve the site. You can object at any time." data-fr="Nous utilisons des statistiques anonymes (Google Analytics) pour améliorer le site. Vous pouvez vous y opposer à tout moment." data-it="Utilizziamo statistiche anonime (Google Analytics) per migliorare il sito. Puoi opporti in qualsiasi momento.">Nous utilisons des statistiques anonymes (Google Analytics) pour améliorer le site. Vous pouvez vous y opposer à tout moment.</p>
   <div class="cc-btns">
     <button id="cc-accept" class="cc-accept" data-de="Akzeptieren" data-en="Accept" data-fr="Accepter" data-it="Accetta">Accepter</button>
     <button id="cc-decline" class="cc-decline" data-de="Ablehnen" data-en="Decline" data-fr="Refuser" data-it="Rifiuta">Refuser</button>
@@ -673,7 +673,7 @@
   // Buchen-Button Klick-Event (GA4)
   (function(){var bl=document.getElementById('book-link');if(bl)bl.addEventListener('click',function(){if(window.gtag)gtag('event','verfuegbarkeit_klick',{event_category:'engagement',event_label:'Bergluft Buchung'});});})();
   // Cookie-Banner / Einwilligung
-  (function(){var b=document.getElementById('cookie-banner');if(!b)return;var c;try{c=localStorage.getItem('cc-consent');}catch(e){}if(!c)b.classList.add('show');function set(v){try{localStorage.setItem('cc-consent',v);}catch(e){}b.classList.remove('show');if(v==='granted'&&window.gtag)gtag('consent','update',{analytics_storage:'granted'});}var a=document.getElementById('cc-accept'),d=document.getElementById('cc-decline');if(a)a.onclick=function(){set('granted');};if(d)d.onclick=function(){set('denied');};})();
+  (function(){var b=document.getElementById('cookie-banner');if(!b)return;var c;try{c=localStorage.getItem('cc-consent');}catch(e){}if(!c)b.classList.add('show');function set(v){try{localStorage.setItem('cc-consent',v);}catch(e){}b.classList.remove('show');if(window.gtag)gtag('consent','update',{analytics_storage:v==='granted'?'granted':'denied'});}var a=document.getElementById('cc-accept'),d=document.getElementById('cc-decline');if(a)a.onclick=function(){set('granted');};if(d)d.onclick=function(){set('denied');};})();
 
   document.getElementById('year').textContent = new Date().getFullYear();
 

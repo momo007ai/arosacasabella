@@ -14,7 +14,7 @@
 
 	# Bilder lange cachen, HTML immer frisch (revalidieren)
 	@img path /images/*
-	header @img Cache-Control "public, max-age=2592000, immutable"
+	header @img Cache-Control "public, max-age=604800"
 	@html path *.html /
 	header @html Cache-Control "no-cache, must-revalidate"
 }
